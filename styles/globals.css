@@ -1,16 +1,17 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+@media screen and (max-width: 1279px) {
+  svg.bubbles {
+    margin-top: 1rem !important;
+  }
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+.grid {
+  display: grid;
+  grid-template-columns: 2fr 1.5fr;
+  gap: 2em 1em;
 }
 
-* {
-  box-sizing: border-box;
+@media screen and (max-width: 970px) {
+  .grid {
+    grid-template-columns: unset;
+  }
 }
