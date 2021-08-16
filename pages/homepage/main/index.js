@@ -1,5 +1,4 @@
 import React from 'react'
-import About from './about'
 import Hero from './hero'
 import { MainLayout } from '@/components/layout'
 import { SkipNavContent } from '@chakra-ui/skip-nav'
