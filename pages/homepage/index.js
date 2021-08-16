@@ -2,7 +2,7 @@ import React, { useRef } from 'react'
 import Header from './header'
 import Main from './main'
 import Footer from './footer'
-import { PrimaryButton } from '@/components/button'
+import { Button } from '@chakra-ui/react'
 
 const Homepage = () => {
   const aboutRef = useRef(null)
@@ -11,7 +11,7 @@ const Homepage = () => {
   const contactRef = useRef(null)
   return (
     <>
-      <PrimaryButton
+      <Button
         as='a'
         href='#about'
         position='absolute'
@@ -20,7 +20,7 @@ const Homepage = () => {
         _focus={{ transform: 'translateX(0%)' }}
       >
         Skip To Content
-      </PrimaryButton>
+      </Button>
       <Header
         aboutRef={aboutRef}
         skillsRef={skillsRef}
