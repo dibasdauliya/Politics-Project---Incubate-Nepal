@@ -1,28 +1,28 @@
-import React from "react";
+import React from 'react'
 import {
   Box,
   keyframes,
   useColorMode,
-  useColorModeValue,
-} from "@chakra-ui/react";
+  useColorModeValue
+} from '@chakra-ui/react'
 
 const SpherePulse = ({ ...props }) => {
-  const secondary = useColorModeValue("purple.500", "teal.200");
-  const { colorMode } = useColorMode();
+  const secondary = useColorModeValue('purple.500', 'teal.200')
+  const { colorMode } = useColorMode()
   return (
     <Box
       {...props}
-      display="block"
-      boxSize={{ base: "0.5em", md: "0.6em", lg: "0.65em" }}
-      rounded="full"
+      display='block'
+      boxSize={{ base: '0.5em', md: '0.6em', lg: '0.65em' }}
+      rounded='full'
       background={secondary}
       boxShadow={`${secondary}66`}
       animation={`${
-        colorMode === "light" ? pulseAnimLight : pulseAnimDark
+        colorMode === 'light' ? pulseAnimLight : pulseAnimDark
       } 2s infinite`}
     />
-  );
-};
+  )
+}
 
 const pulseAnimLight = keyframes`
 0% {
@@ -34,7 +34,7 @@ const pulseAnimLight = keyframes`
 100% {
   box-shadow: 0 0 0 0 #805AD503;
 }
-`;
+`
 const pulseAnimDark = keyframes`
 0% {
   box-shadow: 0 0 0 0 #81E6D966;
@@ -45,6 +45,6 @@ const pulseAnimDark = keyframes`
 100% {
   box-shadow: 0 0 0 0 #81E6D903;
 }
-`;
+`
 
-export default SpherePulse;
+export default SpherePulse

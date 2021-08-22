@@ -5,7 +5,7 @@ import { MdWbSunny } from 'react-icons/md'
 import NavMenu from './NavMenu'
 import useColorSwitcher from '@/utils/hooks/useColorSwitcher'
 
-const Navbar = ({ aboutRef, skillsRef, projectsRef, contactRef }) => {
+const Navbar = () => {
   const { colorMode, toggleColorMode } = useColorMode()
   const { colorLight, colorDark, secondary } = useColorSwitcher()
 

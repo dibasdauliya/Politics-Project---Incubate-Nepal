@@ -1,6 +1,6 @@
 import React from 'react'
 import { Box, Heading, Center } from '@chakra-ui/react'
-import { Body } from '@/components/typography'
+import { Body, TopHeading } from '@/components/typography'
 import { CircleArray } from '@/assets/motion/CircleArray'
 import useColorSwitcher from '@/utils/hooks/useColorSwitcher'
 
@@ -11,14 +11,14 @@ const Hero = ({ ...props }) => {
     <Box {...props}>
       <section className='grid'>
         <Box as='section'>
-          <Heading
+          <TopHeading
             fontSize='5vw'
             bgGradient={`linear(to-l, ${primary}, ${secondary})`}
             bgClip='text'
             marginBottom='0.2em'
           >
             Team Samsad
-          </Heading>
+          </TopHeading>
           <Body
             w={{ base: '90%', xl: '80%' }}
             bg={{
@@ -29,9 +29,11 @@ const Hero = ({ ...props }) => {
             }}
             fontWeight='bold'
           >
-            Description k lekhne? ani title.. ani logo... Lorem ipsum dolor sit
-            amet consectetur adipisicing elit. Voluptate nulla quas totam, quo
-            quibusdam cupiditate odio iure eligendi ipsum aliquam?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla ea
+            mollitia iste cupiditate, consequuntur dolore quis tenetur et
+            veritatis! Quis, recusandae? Error inventore aut sequi, dolor
+            doloribus, assumenda eius nisi sapiente aliquid vero esse asperiores
+            animi quod obcaecati? Temporibus, reiciendis.
           </Body>
         </Box>
 
