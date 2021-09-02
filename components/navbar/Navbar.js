@@ -1,9 +1,18 @@
 import React from 'react'
-import { Flex, useColorMode, IconButton, Icon } from '@chakra-ui/react'
+import {
+  Flex,
+  useColorMode,
+  IconButton,
+  Icon,
+  Link,
+  Image
+} from '@chakra-ui/react'
 import { FaMoon } from 'react-icons/fa'
 import { MdWbSunny } from 'react-icons/md'
 import NavMenu from './NavMenu'
 import useColorSwitcher from '@/utils/hooks/useColorSwitcher'
+import NextLink from 'next/link'
+import NextImage from 'next/image'
 
 const Navbar = () => {
   const { colorMode, toggleColorMode } = useColorMode()
@@ -28,21 +37,30 @@ const Navbar = () => {
     >
       <NavMenu />
 
-      <Icon
-        order={{ lg: -1 }}
-        stroke={colorDark}
-        strokeWidth='2px'
-        p='8px'
-        w='64px'
-        h='64px'
-        viewBox='0 0 200 200'
-        color={secondary}
-      >
-        <path
-          fill='currentColor'
-          d='M 100, 100 m -75, 0 a 75,75 0 1,0 150,0 a 75,75 0 1,0 -150,0'
-        />
-      </Icon>
+      <NextLink to='/' href='/' passHref={true}>
+        <Link order={{ lg: -1 }}>
+          {/* <Icon
+            stroke={colorDark}
+            strokeWidth='2px'
+            p='8px'
+            w='64px'
+            h='64px'
+            viewBox='0 0 200 200'
+            color={secondary}
+          >
+            <path
+              fill='currentColor'
+              d='M 100, 100 m -75, 0 a 75,75 0 1,0 150,0 a 75,75 0 1,0 -150,0'
+            />
+          </Icon> */}
+          <Image
+            src='/logo.png'
+            alt='Logo of Team Samsad'
+            objectFit='cover'
+            boxSize='70px'
+          />
+        </Link>
+      </NextLink>
 
       <IconButton
         aria-label={`Toggle ${light ? 'dark' : 'light'} mode`}

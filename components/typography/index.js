@@ -110,10 +110,10 @@ export const Bullet = ({ children, ...props }) => {
     <Stack {...props} spacing={3} direction='row'>
       <Box
         background={secondary}
-        boxSize={{ base: '6px', md: '10px', lg: '12px' }}
+        boxSize={{ base: '8px', md: '10px', lg: '12px' }}
         rounded='full'
         position='relative'
-        top={{ base: '6px', md: '7px', lg: '8px' }}
+        top={{ base: '10px', md: '7px', lg: '8px' }}
       />
       {children && <Body>{children}</Body>}
     </Stack>

@@ -1,6 +1,5 @@
 import { Image, useColorMode } from '@chakra-ui/react'
 import React from 'react'
-import profile from './me.jpg'
 import portfolio from './portfolio'
 import gitjobs from './gitjobs'
 
@@ -17,8 +16,7 @@ export const ImageProfile = () => {
         lg: '320px',
         xl: '400px'
       }}
-      src='https://unsplash.it/500'
-      fallbackSrc='https://unsplash.it/500'
+      src='logo-noborder.png'
       alt='dummy'
     />
   )

@@ -4,6 +4,7 @@ import { MainLayout } from '@/components/layout'
 import { SkipNavContent } from '@chakra-ui/skip-nav'
 import Articles from './articles'
 import Lorem from './lorem'
+import SliderPart from './slider'
 
 const Main = () => {
   return (
@@ -16,7 +17,9 @@ const Main = () => {
       <SkipNavContent>
         <Articles id='articles' mb='30vh' />
       </SkipNavContent>
+      <SliderPart id='slider' mb='30vh' />
       <Lorem id='lorem' mb='30vh' />
+
       {/* <Skills ref={skillsRef} id="skills" pt="10vh" mb="25vh" />
       <Projects ref={projectsRef} id="projects" pt="10vh" mb="25vh" />
       <Contact ref={contactRef} id="contact" pt="10vh" mb="25vh" /> */}

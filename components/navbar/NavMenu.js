@@ -11,7 +11,6 @@ import {
 } from '@chakra-ui/react'
 import useColorSwitcher from '../../utils/hooks/useColorSwitcher'
 import SideNav from './SideNav'
-import NextLink from 'next/link'
 
 const NavMenu = ({ onOpen, aboutRef, skillsRef, projectsRef, contactRef }) => {
   const { isOpen, onClose } = useDisclosure()
@@ -39,15 +38,15 @@ const NavMenu = ({ onOpen, aboutRef, skillsRef, projectsRef, contactRef }) => {
   return (
     <Box as='nav'>
       <FullNav>
-        <NavMenuItem>item</NavMenuItem>
-        <NavMenuItem>item2</NavMenuItem>
-        <NavMenuItem>item3</NavMenuItem>
+        <NavMenuItem>Articles</NavMenuItem>
+        <NavMenuItem>Slider</NavMenuItem>
+        <NavMenuItem>About</NavMenuItem>
         <NavMenuItem>item4</NavMenuItem>
       </FullNav>
       <SideNav toRef={toRef} isOpen={isOpen} onOpen={onOpen} onClose={onClose}>
-        <NavMenuItem handleClick={handleClick}>item</NavMenuItem>
-        <NavMenuItem handleClick={handleClick}>item2</NavMenuItem>
-        <NavMenuItem handleClick={handleClick}>item3</NavMenuItem>
+        <NavMenuItem handleClick={handleClick}>Article</NavMenuItem>
+        <NavMenuItem handleClick={handleClick}>Slider</NavMenuItem>
+        <NavMenuItem handleClick={handleClick}>About</NavMenuItem>
         <NavMenuItem handleClick={handleClick}>item4</NavMenuItem>
       </SideNav>
     </Box>
@@ -77,7 +76,7 @@ const NavMenuItem = ({ children }) => {
       >
         <Link
           _hover={{ color: secondary, textDecoration: 'none' }}
-          href={`#${children}`}
+          href={`#${children.toLowerCase()}`}
         >
           {children}
         </Link>
