@@ -82,18 +82,7 @@ const Lorem = ({ ...props }) => {
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
               </Bullet>
               <Bullet as='li'>Lorem, ipsum.</Bullet>
-              <Bullet as='li'>
-                Image credit:{' '}
-                <Link
-                  color={secondary}
-                  textDecor='underline'
-                  href='https://unsplash.com'
-                  target='_blank'
-                >
-                  Unsplash
-                </Link>
-                .
-              </Bullet>
+
               {/* <Bullet as='li'>
                 Starting the{' '}
                 <Link
