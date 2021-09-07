@@ -1,3 +1,4 @@
+/* eslint-disable react/display-name */
 import {
   Box,
   Flex,
@@ -20,13 +21,13 @@ import {
 } from '../../../../components/typography'
 import useColorSwitcher from '../../../../utils/hooks/useColorSwitcher'
 
-const Lorem = ({ ...props }) => {
+const Lorem = React.forwardRef(({ ...props }, ref) => {
   const greyBg = useColorModeValue('neutral.300', 'neutral.500')
   const lightGreyBg = useColorModeValue('neutral.100', 'neutral.700')
   const { secondary } = useColorSwitcher()
 
   return (
-    <Box as='section' outline='0' tabIndex={-1} {...props} w='100%'>
+    <Box as='section' outline='0' tabIndex={-1} {...props} w='100%' ref={ref}>
       <Box w='100%' mb={{ base: '32px', md: '64px', xl: '100px' }}>
         <SectionHeader sibling={<Line />} mr='16px'>
           <Flex alignItems='center' alignContent='center'>
@@ -59,7 +60,7 @@ const Lorem = ({ ...props }) => {
           </Box>
         </Box>
         <Stack spacing={12} p='8px' w={{ base: '100%', xl: '50%' }}>
-          <Body mb='1em'>
+          <Body>
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Debitis
             iste consequatur libero deleniti voluptates nostrum veniam atque
             consequuntur illum error quo exercitationem soluta in ex enim illo,
@@ -67,11 +68,11 @@ const Lorem = ({ ...props }) => {
             aspernatur eligendi. Corporis itaque modi blanditiis unde quia
             cumque repellat in.
           </Body>
-          <Body mb='2em'>
+          {/* <Body mb='2em'>
             Quo exercitationem soluta in ex enim illo, consectetur dignissimos
             rem delectus accusantium commodi quos aspernatur eligendi. Corporis
             itaque modi blanditiis unde quia cumque repellat in.
-          </Body>
+          </Body> */}
           <Box>
             <Heading3>
               Lorem ipsum dolor sit amet consectetur adipisicing:
@@ -99,6 +100,6 @@ const Lorem = ({ ...props }) => {
       </Stack>
     </Box>
   )
-}
+})
 
 export default Lorem

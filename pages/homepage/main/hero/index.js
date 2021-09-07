@@ -1,5 +1,5 @@
 import React from 'react'
-import { Box, Heading, Center } from '@chakra-ui/react'
+import { Box, Text, Center } from '@chakra-ui/react'
 import { Body, TopHeading } from '@/components/typography'
 import { CircleArray } from '@/assets/motion/CircleArray'
 import useColorSwitcher from '@/utils/hooks/useColorSwitcher'
@@ -15,11 +15,18 @@ const Hero = ({ ...props }) => {
             fontSize='5vw'
             bgGradient={`linear(to-l, ${primary}, ${secondary})`}
             bgClip='text'
-            marginBottom='0.2em'
+            marginBottom='0.5em'
           >
             Team Samsad
           </TopHeading>
-          <Body
+          <Text fontSize='xl'>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla ea
+            mollitia iste cupiditate, consequuntur dolore quis tenetur et
+            veritatis! Quis, recusandae? Error inventore aut sequi, dolor
+            doloribus, assumenda eius nisi sapiente aliquid vero esse asperiores
+            animi quod obcaecati? Temporibus, reiciendis.
+          </Text>
+          {/* <Body
             w={{ base: '90%', xl: '80%' }}
             bg={{
               base: 'red.200',
@@ -34,7 +41,7 @@ const Hero = ({ ...props }) => {
             veritatis! Quis, recusandae? Error inventore aut sequi, dolor
             doloribus, assumenda eius nisi sapiente aliquid vero esse asperiores
             animi quod obcaecati? Temporibus, reiciendis.
-          </Body>
+          </Body> */}
         </Box>
 
         <Center>

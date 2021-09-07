@@ -5,6 +5,10 @@ import Footer from './footer'
 import { Button } from '@chakra-ui/react'
 
 const Homepage = () => {
+  const aboutRef = useRef(null)
+  const skillsRef = useRef(null)
+  const projectsRef = useRef(null)
+  const contactRef = useRef(null)
   return (
     <>
       <Button
@@ -17,8 +21,18 @@ const Homepage = () => {
       >
         Skip To Content
       </Button>
-      <Header />
-      <Main />
+      <Header
+        aboutRef={aboutRef}
+        skillsRef={skillsRef}
+        projectsRef={projectsRef}
+        contactRef={contactRef}
+      />
+      <Main
+        aboutRef={aboutRef}
+        skillsRef={skillsRef}
+        projectsRef={projectsRef}
+        contactRef={contactRef}
+      />
       <Footer />
     </>
   )

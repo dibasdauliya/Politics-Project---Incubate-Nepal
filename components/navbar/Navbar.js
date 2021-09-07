@@ -14,7 +14,7 @@ import useColorSwitcher from '@/utils/hooks/useColorSwitcher'
 import NextLink from 'next/link'
 import NextImage from 'next/image'
 
-const Navbar = () => {
+const Navbar = ({ aboutRef, skillsRef, projectsRef, contactRef }) => {
   const { colorMode, toggleColorMode } = useColorMode()
   const { colorLight, colorDark, secondary } = useColorSwitcher()
 
@@ -27,15 +27,22 @@ const Navbar = () => {
   return (
     <Flex
       m='auto'
-      p='.5em'
-      w={{ base: '100%', md: '90%', lg: '80%' }}
-      my='3'
+      py='.5em'
+      px='44px'
+      maxW='1200px'
+      // w={{ base: '100%', md: '90%', lg: '80%' }}
+      mt='3'
       justify='space-between'
       align='center'
       direction='row'
       position='relative'
     >
-      <NavMenu />
+      <NavMenu
+        aboutRef={aboutRef}
+        skillsRef={skillsRef}
+        projectsRef={projectsRef}
+        contactRef={contactRef}
+      />
 
       <NextLink to='/' href='/' passHref={true}>
         <Link order={{ lg: -1 }}>

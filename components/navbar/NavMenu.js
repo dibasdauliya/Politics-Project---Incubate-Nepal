@@ -12,12 +12,19 @@ import {
 import useColorSwitcher from '../../utils/hooks/useColorSwitcher'
 import SideNav from './SideNav'
 
-const NavMenu = ({ onOpen, aboutRef, skillsRef, projectsRef, contactRef }) => {
+const NavMenu = ({
+  onOpen,
+  aboutRef,
+  skillsRef,
+  projectsRef,
+  contactRef,
+  ...props
+}) => {
   const { isOpen, onClose } = useDisclosure()
   const [toRef, setToRef] = useState()
 
   const handleClick = (child) => {
-    if (child === 'about') {
+    if (child === 'About') {
       aboutRef.current.focus({ preventScroll: true })
       setToRef(aboutRef)
     }
@@ -37,14 +44,14 @@ const NavMenu = ({ onOpen, aboutRef, skillsRef, projectsRef, contactRef }) => {
 
   return (
     <Box as='nav'>
-      <FullNav>
+      <FullNav handleClick={handleClick} {...props}>
         <NavMenuItem>Articles</NavMenuItem>
         <NavMenuItem>Slider</NavMenuItem>
         <NavMenuItem>About</NavMenuItem>
         <NavMenuItem>item4</NavMenuItem>
       </FullNav>
       <SideNav toRef={toRef} isOpen={isOpen} onOpen={onOpen} onClose={onClose}>
-        <NavMenuItem handleClick={handleClick}>Article</NavMenuItem>
+        <NavMenuItem handleClick={handleClick}>Articles</NavMenuItem>
         <NavMenuItem handleClick={handleClick}>Slider</NavMenuItem>
         <NavMenuItem handleClick={handleClick}>About</NavMenuItem>
         <NavMenuItem handleClick={handleClick}>item4</NavMenuItem>
@@ -53,20 +60,39 @@ const NavMenu = ({ onOpen, aboutRef, skillsRef, projectsRef, contactRef }) => {
   )
 }
 
-const FullNav = ({ children }) => {
+const FullNav = ({ handleClick, children, ...props }) => {
   return (
-    <Stack as='ul' direction='row' display={{ base: 'none', lg: 'flex' }}>
+    <Stack
+      as='ul'
+      {...props}
+      direction='row'
+      display={{ base: 'none', lg: 'flex' }}
+    >
       {children}
     </Stack>
   )
 }
 
-const NavMenuItem = ({ children }) => {
+const NavMenuItem = ({ handleClick, children, ...props }) => {
   const { secondary } = useColorSwitcher()
-
+  const isRef = () => {
+    if (children === 'About') {
+      return 1000
+    }
+    if (children === 'skills') {
+      return 1250
+    }
+    if (children === 'projects') {
+      return 1500
+    }
+    if (children === 'contact') {
+      return 2000
+    }
+  }
   return (
     <UnorderedList>
       <ListItem
+        {...props}
         p='0.25em'
         listStyleType='none'
         fontSize={{ base: 'xl', lg: 'lg' }}
@@ -76,7 +102,8 @@ const NavMenuItem = ({ children }) => {
       >
         <Link
           _hover={{ color: secondary, textDecoration: 'none' }}
-          href={`#${children.toLowerCase()}`}
+          onClick={() => handleClick(children)}
+          href={`/#${children.toLowerCase()}`}
         >
           {children}
         </Link>
