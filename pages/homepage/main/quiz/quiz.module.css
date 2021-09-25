@@ -1,0 +1,70 @@
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.small {
+  color: white;
+  margin-right: 0.7em;
+  align-self: flex-end;
+}
+.minHeight {
+  min-height: 50px;
+  text-align: center;
+}
+
+.wrong {
+  background-color: red;
+  color: white;
+}
+
+.correct {
+  background-color: green;
+  color: white;
+}
+
+.default {
+  background-color: white;
+  color: black;
+}
+
+.disable {
+  cursor: not-allowed;
+  color: gray !important;
+}
+
+.disable:hover {
+  filter: unset !important;
+}
+
+.h3 {
+  margin: 0 0 0.3em 0;
+}
+
+.button {
+  cursor: pointer;
+  padding: 0.7em 1.2em;
+  margin: 0 0.5em;
+  border-radius: 999vw;
+  border: 0;
+  transition: all 0.2s ease-in;
+}
+
+.button:hover,
+.flex a:hover {
+  filter: brightness(0.9);
+}
+
+.quiz {
+  gap: 1em;
+  flex-direction: row;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  min-height: 100vh;
+}
+
+.flex a {
+  color: aliceblue;
+}
