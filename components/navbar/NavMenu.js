@@ -48,13 +48,13 @@ const NavMenu = ({
         <NavMenuItem>Articles</NavMenuItem>
         <NavMenuItem>Slider</NavMenuItem>
         <NavMenuItem>About</NavMenuItem>
-        <NavMenuItem>item4</NavMenuItem>
+        <NavMenuItem>Quiz</NavMenuItem>
       </FullNav>
       <SideNav toRef={toRef} isOpen={isOpen} onOpen={onOpen} onClose={onClose}>
-        <NavMenuItem handleClick={handleClick}>Articles</NavMenuItem>
-        <NavMenuItem handleClick={handleClick}>Slider</NavMenuItem>
-        <NavMenuItem handleClick={handleClick}>About</NavMenuItem>
-        <NavMenuItem handleClick={handleClick}>item4</NavMenuItem>
+        <NavMenuItem>Articles</NavMenuItem>
+        <NavMenuItem>Slider</NavMenuItem>
+        <NavMenuItem>About</NavMenuItem>
+        <NavMenuItem>Quiz</NavMenuItem>
       </SideNav>
     </Box>
   )
@@ -102,7 +102,6 @@ const NavMenuItem = ({ handleClick, children, ...props }) => {
       >
         <Link
           _hover={{ color: secondary, textDecoration: 'none' }}
-          onClick={() => handleClick(children)}
           href={`/#${children.toLowerCase()}`}
         >
           {children}

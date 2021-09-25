@@ -5,6 +5,7 @@ import { SkipNavContent } from '@chakra-ui/skip-nav'
 import Articles from './articles'
 import Lorem from './lorem'
 import SliderPart from './slider'
+import Quiz from './quiz'
 
 const Main = ({ aboutRef, skillsRef, projectsRef, contactRef }) => {
   return (
@@ -15,10 +16,11 @@ const Main = ({ aboutRef, skillsRef, projectsRef, contactRef }) => {
         w={{ xl: '90%' }}
       />
       <SkipNavContent>
-        <Articles id='articles' mb='30vh' />
+        <Articles id='articles' mb='20vh' />
       </SkipNavContent>
-      <SliderPart id='slider' mb='30vh' />
-      <Lorem id='about' mb='30vh' ref={aboutRef} />
+      <SliderPart id='slider' mb='20vh' />
+      <Quiz id='quiz' mb='20vh' />
+      <Lorem id='about' mb='20vh' ref={aboutRef} />
 
       {/* <Skills ref={skillsRef} id="skills" pt="10vh" mb="25vh" />
       <Projects ref={projectsRef} id="projects" pt="10vh" mb="25vh" />

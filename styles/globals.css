@@ -15,3 +15,22 @@
     grid-template-columns: unset;
   }
 }
+
+.disable {
+  cursor: not-allowed !important;
+  color: gray !important;
+}
+
+.disable:hover {
+  filter: unset !important;
+}
+
+.wrong {
+  background-color: red;
+  color: white;
+}
+
+.correct {
+  background-color: green;
+  color: white;
+}
