@@ -27,7 +27,7 @@ const Navbar = ({ aboutRef, skillsRef, projectsRef, contactRef }) => {
     <Flex
       m='auto'
       py='.5em'
-      px='44px'
+      px='20px'
       maxW='1200px'
       // w={{ base: '100%', md: '90%', lg: '80%' }}
       mt='3'

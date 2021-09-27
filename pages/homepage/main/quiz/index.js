@@ -3,16 +3,13 @@ import {
   Flex,
   Button,
   Center,
-  Slider,
-  SliderTrack,
-  SliderThumb,
-  Heading,
+  useColorMode,
   Stack,
   Link,
   Text
 } from '@chakra-ui/react'
 
-import { useEffect, useRef, useState } from 'react'
+import { useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
   faChevronCircleLeft,
@@ -87,6 +84,10 @@ function Quiz({ ...props }) {
 
   const { secondary, primary } = useColorSwitcher()
 
+  const { colorMode } = useColorMode()
+
+  const light = colorMode === 'light'
+
   function handleClick(isCorrect) {
     setClicked(true)
 
@@ -105,7 +106,7 @@ function Quiz({ ...props }) {
   }
 
   function leftClick() {
-    if (position !== 0 && position < quiz.length - 1) setPos((pos) => pos - 1)
+    if (position !== 0 && position < quiz.length) setPos((pos) => pos - 1)
     setClicked(false)
   }
 
@@ -136,6 +137,8 @@ function Quiz({ ...props }) {
             <Link
               _hover={{ color: secondary }}
               href='#left'
+              title='Previous Question'
+              aria-label='Previous Question'
               className={`left ${
                 position === 0 || position > quiz.length - 1 ? 'disable' : null
               }`}
@@ -161,8 +164,7 @@ function Quiz({ ...props }) {
                         <Button
                           mt='1.5'
                           ml='2'
-                          // backgroundColor={secondary}
-                          textColor='white'
+                          textColor={`${light ? 'white' : 'black'}`}
                           key={answer}
                           onClick={() => handleClick(isCorrect)}
                           _hover={{ opacity: 0.9 }}
@@ -206,6 +208,8 @@ function Quiz({ ...props }) {
             <Link
               _hover={{ color: secondary }}
               href='#right'
+              title='Next Question'
+              aria-label='Next Question'
               className={`right ${
                 position > quiz.length - 1 ? 'disable' : null
               }`}

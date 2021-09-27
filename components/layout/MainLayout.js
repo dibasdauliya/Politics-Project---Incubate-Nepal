@@ -9,7 +9,7 @@ const MainLayout = ({ children, ...props }) => {
       as='main'
       // w={{ base: "100vw", md: "90vw", lg: "80vw" }}
       maxW='1200px'
-      px='44px'
+      px='20px'
       m='auto'
     >
       {children}
