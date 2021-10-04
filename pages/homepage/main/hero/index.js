@@ -25,12 +25,12 @@ const Hero = ({ ...props }) => {
           >
             Team Samsad
           </TopHeading>
-          <Text fontSize='md' marginBottom='1em'>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla ea
-            mollitia iste cupiditate, consequuntur dolore quis tenetur et
-            veritatis! Quis, recusandae? Error inventore aut sequi, dolor
-            doloribus, assumenda eius nisi sapiente aliquid vero esse asperiores
-            animi quod obcaecati? Temporibus, reiciendis.
+          <Text fontSize='md' marginBottom='1.5em'>
+            Our research mainly focuses on studying the representation of
+            minorities and underrepresented in the legislative parliament of
+            Nepal. It tries to understand the structure of federal parliament
+            and understand how changes in those structures can impact the
+            representation of people in the parliament.
           </Text>
           <Button
             bgColor={secondary}

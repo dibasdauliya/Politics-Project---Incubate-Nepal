@@ -9,6 +9,7 @@ function MyApp({ Component, pageProps }) {
     <ChakraProvider theme={customTheme}>
       <Head>
         <meta content='width=device-width, initial-scale=1.0' name='viewport' />
+        <title>Team Samsad</title>
       </Head>
       <Component {...pageProps} />
     </ChakraProvider>
