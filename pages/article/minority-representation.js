@@ -230,7 +230,11 @@ export default function Article() {
               </Text>
               <small>
                 Source:{' '}
-                <Link target='_blank' rel='referrer noopener'>
+                <Link
+                  target='_blank'
+                  rel='referrer noopener'
+                  href='https://www.himalmag.com/bahunvada-myth-or-reality-kamal-p-malla-1992/'
+                >
                   https://www.himalmag.com/bahunvada-myth-or-reality-kamal-p-malla-1992/
                 </Link>
               </small>
@@ -338,11 +342,11 @@ export default function Article() {
                   </li>
                   <li>
                     <Link
-                      href='https://www.ifes.org/sites/default/files/2017_ifes_nepal_house_of_representatives_and_state_assembly_elections_faqs_final_1.pdf?fbclid=IwAR0ZPKXMDs3PL1-yjCMGbKFJOJ9Pn3UwfGCYHHXxELRcEBKd8cW3BMU58zg'
+                      href='https://www.ifes.org/sites/default/files/2017_ifes_nepal_house_of_representatives_and_state_assembly_elections_faqs_final_1.pdf'
                       target='_blank'
                       rel='referrer noopener'
                     >
-                      https://www.ifes.org/sites/default/files/2017_ifes_nepal_house_of_representatives_and_state_assembly_elections_faqs_final_1.pdf?fbclid=IwAR0ZPKXMDs3PL1-yjCMGbKFJOJ9Pn3UwfGCYHHXxELRcEBKd8cW3BMU58zg{' '}
+                      https://www.ifes.org/sites/default/files/2017_ifes_nepal_house_of_representatives_and_state_assembly_elections_faqs_final_1.pdf{' '}
                     </Link>
                   </li>
                 </UnorderedList>
