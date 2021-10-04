@@ -25,7 +25,7 @@ export const ArticleCard = ({ title, description, slug }) => {
           <Link color={secondary}>{title}</Link>
         </NextLink>
       </Heading3>
-      <Body>{description}</Body>
+      <Body noOfLines={3}>{description}</Body>
     </Box>
   )
 }

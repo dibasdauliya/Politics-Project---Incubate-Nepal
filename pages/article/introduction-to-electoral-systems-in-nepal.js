@@ -501,7 +501,7 @@ export default function Article() {
             </Box>
             <Box>
               <Heading3>
-                Can the FPTP : PR ratio be changed in any way without breaching
+                Can the FPTP:PR ratio be changed in any way without breaching
                 the constitution?
               </Heading3>
               <Text>

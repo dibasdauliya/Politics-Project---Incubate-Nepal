@@ -4,7 +4,7 @@ const data = [
     id: 0,
     title: 'Changes in Governance Structure in Nepal',
     description:
-      "The Unification of Nepal: The country, which we call Nepal today, was divided into many smaller states before 1743 AD.  The unification of Nepal officially... Rana Regime: Kaji Junga Bahadur Kunwar, another interesting person in Nepal's history, executed Kot Massacre on 14th  September...",
+      "The Unification of Nepal: The country, which we call Nepal today, was divided into many smaller states before 1743 AD.  The unification of Nepal officially... Rana Regime: Kaji Junga Bahadur Kunwar, another interesting person in Nepal's history, executed Kot Massacre on 14th  September",
     slug: 'article-1'
   },
   {
@@ -18,37 +18,23 @@ const data = [
     id: 2,
     title: 'Introduction to electoral systems in Nepal ',
     description:
-      'Which electoral system is used and how? Advantages and Disadvantages of Electoral Constituencies. Mixed Electoral System. Advantages and Disadvantages of FPTP and PR. Necessity of Mixed Electoral System.',
+      'Which electoral system is used and how? Advantages and Disadvantages of Electoral Constituencies. Mixed Electoral System. Advantages and Disadvantages of FPTP and PR. Necessity of Mixed Electoral System. Can the FPTP:PR ratio be changed in any way without breaching the constitution?',
     slug: 'introduction-to-electoral-systems-in-nepal'
   },
   {
     id: 3,
-    title: 'What is Proportional Representation trying to achieve?',
+    title:
+      'Legal provisions for representation of minorities and underrepresented',
     description:
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati voluptates consequatur nobis nulla sunt dolorum quisquam illo quod! Ipsam aut iste, illo et perspiciatis dolore? Ea quia dignissimos sapiente deserunt.',
-    slug: 'what-is-Proportional-Representation-trying-to-achieve'
+    slug: 'article-4'
   },
   {
     id: 4,
-    title: 'What is FPTP trying to achieve?',
+    title: 'Electoral constituency division',
     description:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati voluptates consequatur nobis nulla sunt dolorum quisquam illo quod! Ipsam aut iste, illo et perspiciatis dolore? Ea quia dignissimos sapiente deserunt.',
-    slug: 'what-is-fptp-trying-to-achieve'
-  },
-  {
-    id: 5,
-    title: 'Why 60-40%?',
-    description:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati voluptates consequatur nobis nulla sunt dolorum quisquam illo quod! Ipsam aut iste, illo et perspiciatis dolore? Ea quia dignissimos sapiente deserunt.',
-    slug: 'why-60-40'
-  },
-  {
-    id: 6,
-    title:
-      'What are the “democratic”-ness of each of these systems, and what would a 100% FPTP system represent vs a 100% samanupatik system?',
-    description:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati voluptates consequatur nobis nulla sunt dolorum quisquam illo quod! Ipsam aut iste, illo et perspiciatis dolore? Ea quia dignissimos sapiente deserunt.',
-    slug: 'article-7'
+      "165 members in the lower house of the parliament in Nepal are elected from 165 different electoral constituencies around the country through the FPTP system discussed earlier. Why 165? Well, that's a broader question. Before we dive deep into it, let us gain an",
+    slug: 'electoral-constituency-division'
   }
 ]
 

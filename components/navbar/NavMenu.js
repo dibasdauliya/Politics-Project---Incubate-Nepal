@@ -10,6 +10,7 @@ import {
   UnorderedList
 } from '@chakra-ui/react'
 import useColorSwitcher from '../../utils/hooks/useColorSwitcher'
+import NextLink from 'next/link'
 import SideNav from './SideNav'
 
 const NavMenu = ({
@@ -100,12 +101,15 @@ const NavMenuItem = ({ handleClick, children, ...props }) => {
         textAlign='center'
         mx={{ lg: '1.5em' }}
       >
-        <Link
-          _hover={{ color: secondary, textDecoration: 'none' }}
+        <NextLink
           href={`/#${children.toLowerCase()}`}
+          to={`/#${children.toLowerCase()}`}
+          passHref={true}
         >
-          {children}
-        </Link>
+          <Link _hover={{ color: secondary, textDecoration: 'none' }}>
+            {children}
+          </Link>
+        </NextLink>
       </ListItem>
     </UnorderedList>
   )
