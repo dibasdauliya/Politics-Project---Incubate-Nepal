@@ -7,6 +7,7 @@ const breakpoints = createBreakpoints({
 })
 
 const theme = extendTheme({
+  useSystemColorMode: true,
   styles: {
     global: (props) => ({
       html: {

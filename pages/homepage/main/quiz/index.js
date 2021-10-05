@@ -17,7 +17,6 @@ import SpherePulse from '@/assets/motion/SpherePulse'
 import { Line, SectionHeader } from '@/components/layout'
 import { Title, Bullet, Heading3, Body } from '@/components/typography'
 import useColorSwitcher from '@/utils/hooks/useColorSwitcher'
-import { BiBrightness } from 'react-icons/bi'
 import {
   FaCheckCircle,
   FaChevronCircleLeft,

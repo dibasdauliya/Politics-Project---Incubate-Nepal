@@ -1,5 +1,15 @@
 import React from 'react'
 import { Box, Text, Center, Button, useColorMode } from '@chakra-ui/react'
+import {
+  Modal,
+  ModalOverlay,
+  ModalCloseButton,
+  ModalContent,
+  ModalHeader,
+  ModalBody,
+  ModalFooter
+} from '@chakra-ui/modal'
+import { useDisclosure } from '@chakra-ui/hooks'
 import { Body, TopHeading } from '@/components/typography'
 import { CircleArray } from '@/assets/motion/CircleArray'
 import useColorSwitcher from '@/utils/hooks/useColorSwitcher'
@@ -7,6 +17,8 @@ import { FaPlayCircle } from 'react-icons/fa'
 
 const Hero = ({ ...props }) => {
   const { secondary, primary } = useColorSwitcher()
+
+  const { isOpen, onOpen, onClose } = useDisclosure()
 
   const { colorMode } = useColorMode()
 
@@ -37,10 +49,33 @@ const Hero = ({ ...props }) => {
             textColor={`${light ? 'white' : 'black'}`}
             borderRadius='full'
             py='1.5em'
+            onClick={onOpen}
             leftIcon={<FaPlayCircle />}
           >
-            Lorem ipsum
+            Introduction Video
           </Button>
+          <Modal onClose={onClose} size='xl' isOpen={isOpen}>
+            <ModalOverlay />
+            <ModalContent>
+              {/* <ModalHeader>Introduction of our project</ModalHeader> */}
+              <ModalHeader>🎶🎵🎧</ModalHeader>
+              <ModalCloseButton />
+              <ModalBody>
+                <iframe
+                  width='100%'
+                  height='350px'
+                  src='https://www.youtube-nocookie.com/embed/sSe7lgvtGes?autoplay=1&amp;start=21'
+                  title='YouTube video player'
+                  frameBorder='0'
+                  allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
+                  allowFullScreen
+                ></iframe>
+              </ModalBody>
+              <ModalFooter>
+                <Button onClick={onClose}>Close</Button>
+              </ModalFooter>
+            </ModalContent>
+          </Modal>
           {/* <Body
             w={{ base: '90%', xl: '80%' }}
             bg={{
