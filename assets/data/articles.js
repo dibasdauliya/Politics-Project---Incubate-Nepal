@@ -32,7 +32,7 @@ const data = [
     id: 4,
     title: 'Electoral constituency division',
     description:
-      "165 members in the lower house of the parliament in Nepal are elected from 165 different electoral constituencies around the country through the FPTP system discussed earlier. Why 165? Well, that's a broader question. Before we dive deep into it, let us gain an initial understanding of the present division.",
+      'There are 165 electoral constituencies in Nepal. On what basis are those constituencies divided? Is Population the sole basis? What does the allocation look like on the level of each district?',
     slug: 'electoral-constituency-division'
   }
 ]

@@ -1,17 +1,11 @@
 import React from 'react'
-import {
-  Flex,
-  useColorMode,
-  IconButton,
-  Icon,
-  Link,
-  Image
-} from '@chakra-ui/react'
+import { Flex, useColorMode, IconButton, Icon, Link } from '@chakra-ui/react'
 import { FaMoon } from 'react-icons/fa'
 import { MdWbSunny } from 'react-icons/md'
 import NavMenu from './NavMenu'
 import useColorSwitcher from '@/utils/hooks/useColorSwitcher'
 import NextLink from 'next/link'
+import Image from 'next/image'
 
 const Navbar = ({ aboutRef, skillsRef, projectsRef, contactRef }) => {
   const { colorMode, toggleColorMode } = useColorMode()
@@ -62,8 +56,8 @@ const Navbar = ({ aboutRef, skillsRef, projectsRef, contactRef }) => {
           <Image
             src='/logo.png'
             alt='Logo of Team Samsad'
-            objectFit='cover'
-            boxSize='70px'
+            width='70px'
+            height='70px'
           />
         </Link>
       </NextLink>

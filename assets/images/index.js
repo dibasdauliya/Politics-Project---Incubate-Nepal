@@ -17,7 +17,7 @@ export const ImageProfile = () => {
         xl: '400px'
       }}
       src='logo-noborder.png'
-      alt='dummy'
+      alt='logo of Team Samsad'
     />
   )
 }

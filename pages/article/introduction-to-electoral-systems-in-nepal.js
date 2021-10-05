@@ -109,14 +109,16 @@ export default function Article() {
                   election.
                 </ListItem>
               </List>
-              Source:
-              <Link
-                target='_blank'
-                rel='referrer noopener'
-                href='https://aceproject.org/main/english/bd/bda02a01.htm'
-              >
-                https://aceproject.org/main/english/bd/bda02a01.htm
-              </Link>
+              <small>
+                Source:{' '}
+                <Link
+                  target='_blank'
+                  rel='referrer noopener'
+                  href='https://aceproject.org/main/english/bd/bda02a01.htm'
+                >
+                  https://aceproject.org/main/english/bd/bda02a01.htm
+                </Link>
+              </small>
             </Box>
             <Box mb='2em'>
               <Heading3>Disadvantages of Electoral Constituencies</Heading3>

@@ -27,6 +27,7 @@ import { MainLayout } from '@/components/layout'
 import Head from 'next/head'
 import MathJax from 'react-mathjax'
 import CBullet from '@/components/typography/bullet'
+import useColorSwitcher from '@/utils/hooks/useColorSwitcher'
 
 // export async function getStaticProps() {
 //   const url = 'https://docs.google.com/spreadsheets/d/'
@@ -46,6 +47,8 @@ import CBullet from '@/components/typography/bullet'
 export default function Article() {
   // const rows = props.rows.map((data) => data)
   // const newRow = rows.map(({ c }) => c)
+
+  const { secondary } = useColorSwitcher()
 
   const title = 'Electoral constituency division'
 
@@ -74,7 +77,7 @@ export default function Article() {
               {title}
             </Heading>
             <Stack spacing='1em'>
-              <Text>
+              {/* <Text>
                 165 members in the lower house of the parliament in Nepal are
                 elected from 165 different electoral constituencies around the
                 country through the FPTP system discussed earlier. Why 165?
@@ -95,7 +98,6 @@ export default function Article() {
                   initially calculate the population per seat in the lower house
                   for those elected through FPTP.
                 </Text>
-                {/* prettier-ignore */}
                 <MathJax.Provider>
                 <MathJax.Node formula={'\\text{Population per seat} = \\frac{2,64,94,504}{165} \\approx 1,60,573'} /> 
               </MathJax.Provider>
@@ -150,7 +152,7 @@ export default function Article() {
                 </MathJax.Provider>
               </Box>
               <Box>
-                <Text>Sarlahi has an area of </Text>
+                Sarlahi has an area of{' '}
                 <MathJax.Provider>
                   <MathJax.Node inline formula={'1,259 \\, km^2'} />
                 </MathJax.Provider>
@@ -274,7 +276,7 @@ export default function Article() {
                 allocation. It is in no way a clear representation of what
                 actually happened when the allocation was done. But it seems
                 that the model fits the allocation to a fair degree. 
-              </Text>
+              </Text> */}
               <Text>
                 The constitution of Nepal on Article "84" Sub article "1"
                 section "a" , regarding the delineation of electoral
@@ -515,7 +517,27 @@ export default function Article() {
                 quantified.
               </Text>
 
-              <Box className='scroll' overflowX='scroll'>
+              <Box
+                className='scroll'
+                overflowX='scroll'
+                css={{
+                  '&::-webkit-scrollbar': {
+                    width: '10px',
+                    height: '10px'
+                  },
+                  '&::-webkit-scrollbar-track': {
+                    background: '#f1f1f1',
+                    borderRadius: '24px'
+                  },
+                  '&::-webkit-scrollbar-thumb': {
+                    backgroundColor: '#666',
+                    borderRadius: '24px'
+                  },
+                  '&::-webkit-scrollbar-thumb:hover': {
+                    backgroundColor: '#777'
+                  }
+                }}
+              >
                 <Table variant='simple' mt='1em'>
                   {/* <TableCaption textAlign='start' position='fixed'>
                     District Data
@@ -528,15 +550,16 @@ export default function Article() {
                     </Tr> */}
                     <Tr>
                       <Th>District</Th>
-                      <Th>Population at 2021*</Th>
+                      {/* <Th>Population at 2021*</Th> */}
                       <Th>Population at 2011</Th>
-                      <Th>Population at 2001</Th>
-                      <Th>Population at 1981</Th>
+                      {/* <Th>Population at 2001</Th>
+                      <Th>Population at 1981</Th> */}
                       <Th>Area (km²)</Th>
                       <Th>Zone</Th>
                       <Th title='Number of seats'>No. of Seats</Th>
+                      <Th>Ideal population</Th>
                       <Th>Surplus Population</Th>
-                      <Th>Growth rate</Th>
+                      {/* <Th>Growth rate</Th> */}
                       <Th>Seats Gained</Th>
                       <Th title='Seats with respect to population'>
                         Seats w.r.t. population
@@ -558,20 +581,22 @@ export default function Article() {
                         surplusPopn,
                         growthRate,
                         seatsWrtPop,
-                        seatsGained
+                        seatsGained,
+                        idealPopn
                       }) => {
                         return (
                           <Tr key={district}>
                             <Td>{district}</Td>
-                            <Td>{Math.round(popn2021).toLocaleString()}</Td>
-                            <Td>{pop2001.toLocaleString()}</Td>
+                            {/* <Td>{Math.round(popn2021).toLocaleString()}</Td> */}
+                            {/* <Td>{pop2001.toLocaleString()}</Td> */}
                             <Td>{pop2011.toLocaleString()}</Td>
-                            <Td>{pop1981.toLocaleString()}</Td>
+                            {/* <Td>{pop1981.toLocaleString()}</Td> */}
                             <Td>{areakm.toLocaleString()}</Td>
                             <Td>{zone}</Td>
                             <Td>{noOfSeats}</Td>
+                            <Td>{idealPopn.toLocaleString()}</Td>
                             <Td>{surplusPopn.toLocaleString()}</Td>
-                            <Td>{growthRate.toFixed(3)}</Td>
+                            {/* <Td>{growthRate.toFixed(3)}</Td> */}
                             <Td>{seatsGained.toFixed(3)}</Td>
                             <Td>{seatsWrtPop.toFixed(3)}</Td>
                           </Tr>

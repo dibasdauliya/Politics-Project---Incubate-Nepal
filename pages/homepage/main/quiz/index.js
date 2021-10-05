@@ -6,23 +6,26 @@ import {
   useColorMode,
   Stack,
   Link,
-  Text
+  Text,
+  List,
+  ListIcon,
+  ListItem
 } from '@chakra-ui/react'
 
 import { useState } from 'react'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import {
-  faChevronCircleLeft,
-  faChevronCircleRight,
-  faSync,
-  faCheckCircle,
-  faTimesCircle
-} from '@fortawesome/free-solid-svg-icons'
 import SpherePulse from '@/assets/motion/SpherePulse'
 import { Line, SectionHeader } from '@/components/layout'
 import { Title, Bullet, Heading3, Body } from '@/components/typography'
 import useColorSwitcher from '@/utils/hooks/useColorSwitcher'
 import { BiBrightness } from 'react-icons/bi'
+import {
+  FaCheckCircle,
+  FaChevronCircleLeft,
+  FaChevronCircleRight,
+  FaSync,
+  FaTimesCircle
+} from 'react-icons/fa'
+import CBullet from '@/components/typography/bullet'
 
 function Quiz({ ...props }) {
   const [position, setPos] = useState(0)
@@ -30,6 +33,8 @@ function Quiz({ ...props }) {
   const [score, setScore] = useState(0)
   const [info, showInfo] = useState(false)
   const [correct, setIsCorrect] = useState(null)
+
+  const [weakPoint, setWeak] = useState([])
 
   const quiz = [
     {
@@ -40,9 +45,10 @@ function Quiz({ ...props }) {
           isCorrect: false
         },
         { answer: 'hi2', isCorrect: false },
-        { answer: 'hi3', isCorrect: true },
+        { answer: 'hi3 (um)', isCorrect: true },
         { answer: 'hi4', isCorrect: false }
-      ]
+      ],
+      link: 'link for ques 1'
     },
     {
       question: 'This is question 2',
@@ -51,10 +57,11 @@ function Quiz({ ...props }) {
           answer: 'hi1',
           isCorrect: false
         },
-        { answer: 'hi2', isCorrect: true },
+        { answer: 'hi2 (um)', isCorrect: true },
         { answer: 'hi3', isCorrect: false },
         { answer: 'hi4', isCorrect: false }
-      ]
+      ],
+      link: 'link for ques 2'
     },
     {
       question: 'This is question 3',
@@ -65,20 +72,22 @@ function Quiz({ ...props }) {
         },
         { answer: 'hi2', isCorrect: false },
         { answer: 'hi3', isCorrect: false },
-        { answer: 'hi4', isCorrect: true }
-      ]
+        { answer: 'hi4 (um)', isCorrect: true }
+      ],
+      link: 'link for ques 3'
     },
     {
       question: 'This is question 4',
       answers: [
         {
-          answer: 'hi1',
+          answer: 'hi1 (um)',
           isCorrect: true
         },
         { answer: 'hi2', isCorrect: false },
         { answer: 'hi3', isCorrect: false },
         { answer: 'hi4', isCorrect: false }
-      ]
+      ],
+      link: 'link for ques 4'
     }
   ]
 
@@ -100,6 +109,10 @@ function Quiz({ ...props }) {
         setScore((p) => p + 1)
         setIsCorrect(true)
       } else {
+        const { link } = quiz[position]
+        setWeak((prev) => {
+          return [...prev, link]
+        })
         setIsCorrect(false)
       }
     }
@@ -118,6 +131,7 @@ function Quiz({ ...props }) {
   function startAgain() {
     setPos(0)
     setScore(0)
+    setWeak([])
   }
 
   return (
@@ -132,7 +146,7 @@ function Quiz({ ...props }) {
       </Box>
 
       <Box>
-        <Flex justifyContent='center' alignItems='center' gridGap={3}>
+        <Flex justifyContent='center' alignItems='center'>
           <Box fontSize='2xl'>
             <Link
               _hover={{ color: secondary }}
@@ -143,11 +157,13 @@ function Quiz({ ...props }) {
                 position === 0 || position > quiz.length - 1 ? 'disable' : null
               }`}
               onClick={leftClick}
+              display='block'
+              padding='2em'
             >
-              <FontAwesomeIcon icon={faChevronCircleLeft} />
+              <FaChevronCircleLeft />
             </Link>
           </Box>
-          <Center w='60%'>
+          <Center width='60%'>
             {position < quiz.length ? (
               <>
                 <Stack>
@@ -184,23 +200,56 @@ function Quiz({ ...props }) {
                   <Box minH='30px' textAlign='center'>
                     {info === true &&
                       (correct ? (
-                        <Text fontSize='md'>
-                          Correct <FontAwesomeIcon icon={faCheckCircle} />{' '}
-                        </Text>
+                        <Flex
+                          alignItems='center'
+                          justifyContent='center'
+                          gridGap='1.5'
+                        >
+                          {' '}
+                          <FaCheckCircle /> Correct
+                        </Flex>
                       ) : (
-                        <Text fontSize='md'>
-                          Wrong <FontAwesomeIcon icon={faTimesCircle} />{' '}
-                        </Text>
+                        <Flex
+                          alignItems='center'
+                          justifyContent='center'
+                          gridGap='1.5'
+                        >
+                          {' '}
+                          <FaTimesCircle /> Wrong
+                        </Flex>
                       ))}
                   </Box>
                 </Stack>
               </>
             ) : (
-              <Flex flexDir='column'>
-                <Heading3>Total points: {score}</Heading3>
-                <Button roundedBottom onClick={startAgain}>
-                  Start Again &nbsp; <FontAwesomeIcon icon={faSync} />{' '}
-                </Button>
+              <Flex flexDir='column' gridGap='1.5em'>
+                <Stack textAlign='center'>
+                  <Heading3>Total points: {score}</Heading3>
+                  <Button roundedBottom onClick={startAgain}>
+                    Start Again &nbsp; <FaSync />{' '}
+                  </Button>
+                </Stack>
+                <Stack>
+                  {weakPoint.length ? (
+                    <>
+                      <Body>
+                        Recommended articles to improve your results 📈:
+                      </Body>
+                      <List spacing={2}>
+                        {weakPoint.map((link, idx) => (
+                          <ListItem key={idx}>
+                            <ListIcon as={CBullet} />
+                            {link}
+                          </ListItem>
+                        ))}
+                      </List>
+                    </>
+                  ) : score == 0 ? (
+                    <Center>Hmmm 😑</Center>
+                  ) : (
+                    <Center>You got a perfect score. 👌</Center>
+                  )}
+                </Stack>
               </Flex>
             )}
           </Center>
@@ -214,8 +263,11 @@ function Quiz({ ...props }) {
                 position > quiz.length - 1 ? 'disable' : null
               }`}
               onClick={rightClick}
+              display='block'
+              height='100%'
+              padding='2em'
             >
-              <FontAwesomeIcon icon={faChevronCircleRight} />
+              <FaChevronCircleRight />
             </Link>
           </Box>
         </Flex>
