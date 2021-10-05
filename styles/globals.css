@@ -34,3 +34,18 @@
   background-color: green;
   color: white;
 }
+
+.hide {
+  display: none;
+}
+
+@media only screen and (min-width: 1080px) {
+  .gridd {
+    display: grid;
+    gap: 1.5em;
+    grid-template-columns: 70% 30%;
+  }
+  .hide {
+    display: block;
+  }
+}

@@ -118,14 +118,16 @@ function Quiz({ ...props }) {
     }
   }
 
-  function leftClick() {
+  function leftClick(e) {
     if (position !== 0 && position < quiz.length) setPos((pos) => pos - 1)
     setClicked(false)
+    e.preventDefault()
   }
 
   function rightClick() {
     position < quiz.length && setPos((pos) => pos + 1)
     setClicked(false)
+    e.preventDefault()
   }
 
   function startAgain() {

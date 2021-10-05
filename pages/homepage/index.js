@@ -1,7 +1,7 @@
 import React, { useRef } from 'react'
-import Header from './header'
+import Header from '@/components/header'
 import Main from './main'
-import Footer from './footer'
+import Footer from '@/components/footer'
 import { Button } from '@chakra-ui/react'
 
 const Homepage = () => {
