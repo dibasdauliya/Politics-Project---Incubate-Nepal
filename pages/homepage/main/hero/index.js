@@ -3,13 +3,12 @@ import { Box, Text, Center, Button, useColorMode } from '@chakra-ui/react'
 import { Body, TopHeading } from '@/components/typography'
 import { CircleArray } from '@/assets/motion/CircleArray'
 import useColorSwitcher from '@/utils/hooks/useColorSwitcher'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faPlay, faPlayCircle } from '@fortawesome/free-solid-svg-icons'
+import { FaPlayCircle } from 'react-icons/fa'
 
 const Hero = ({ ...props }) => {
   const { secondary, primary } = useColorSwitcher()
 
-  const { colorMode, toggleColorMode } = useColorMode()
+  const { colorMode } = useColorMode()
 
   const light = colorMode === 'light'
 
@@ -38,7 +37,7 @@ const Hero = ({ ...props }) => {
             textColor={`${light ? 'white' : 'black'}`}
             borderRadius='full'
             py='1.5em'
-            leftIcon={<FontAwesomeIcon icon={faPlayCircle} />}
+            leftIcon={<FaPlayCircle />}
           >
             Lorem ipsum
           </Button>

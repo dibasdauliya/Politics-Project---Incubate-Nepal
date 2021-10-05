@@ -1,7 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
 import React, { useEffect, useState } from 'react'
 import data from '@/assets/data/articles.js'
-import { useRouter } from 'next/router'
 import Header from '../homepage/header'
 import Footer from '../homepage/footer'
 import {
@@ -10,15 +9,6 @@ import {
   Heading,
   Text,
   Link,
-  Stack,
-  Table,
-  Thead,
-  Tbody,
-  UnorderedList,
-  Tr,
-  Th,
-  Td,
-  TableCaption,
   List,
   ListIcon,
   ListItem
@@ -30,11 +20,6 @@ import { Bullet, Heading2, Heading3 } from '@/components/typography'
 import CBullet from '@/components/typography/bullet'
 
 export default function Article() {
-  // const [articles, setArticles] = useState(data)
-
-  const router = useRouter()
-  const { articleSlug } = router.query
-
   const title = 'Introduction to electoral systems in Nepal'
 
   return (
@@ -81,7 +66,7 @@ export default function Article() {
                 list.
               </Text>
               <small>
-                Source:
+                Source:{' '}
                 <Link
                   target='_blank'
                   rel='referrer noopener'
@@ -103,7 +88,7 @@ export default function Article() {
                 http://www.election.gov.np/election/en/district-wise-constituency-map.html
               </Link>
             </Box>
-            <Box mb='1em'>
+            <Box mb='2em'>
               <Heading3>Advantages of Electoral Constituencies</Heading3>
               <List spacing={2}>
                 <ListItem>

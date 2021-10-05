@@ -1,5 +1,4 @@
 const data = [
-  // Prior to 2007, Nepal was a constitutional monarchy. How is that different than monarchy, and why did the people of Nepal think it was inadequate compared to a democracy?
   {
     id: 0,
     title: 'Changes in Governance Structure in Nepal',
@@ -26,14 +25,14 @@ const data = [
     title:
       'Legal provisions for representation of minorities and underrepresented',
     description:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati voluptates consequatur nobis nulla sunt dolorum quisquam illo quod! Ipsam aut iste, illo et perspiciatis dolore? Ea quia dignissimos sapiente deserunt.',
+      'Rules for making a PR list in HoR: A closed list of at least 10% of total seats and at most the total seats must be submitted. 50% of candidates in the list need to be women. The list should resemble people from Dalit, Adibasi/Janajati, Tharu, Madhesi, Khas-Arya, Muslim as per the mentioned percentage as far as possible. Disadvantaged groups and physically challenged people',
     slug: 'article-4'
   },
   {
     id: 4,
     title: 'Electoral constituency division',
     description:
-      "165 members in the lower house of the parliament in Nepal are elected from 165 different electoral constituencies around the country through the FPTP system discussed earlier. Why 165? Well, that's a broader question. Before we dive deep into it, let us gain an",
+      "165 members in the lower house of the parliament in Nepal are elected from 165 different electoral constituencies around the country through the FPTP system discussed earlier. Why 165? Well, that's a broader question. Before we dive deep into it, let us gain an initial understanding of the present division.",
     slug: 'electoral-constituency-division'
   }
 ]
