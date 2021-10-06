@@ -1,23 +1,29 @@
-import { Image, useColorMode } from '@chakra-ui/react'
+import { useColorMode } from '@chakra-ui/react'
 import React from 'react'
 import portfolio from './portfolio'
 import gitjobs from './gitjobs'
+import Image from 'next/image'
 
-export const ImageProfile = () => {
+export const ImageProfile = ({ src, alt }) => {
   return (
     <Image
-      mx='auto'
-      borderRadius='full'
-      objectFit='cover'
-      boxSize={{
-        base: '160px',
-        sm: '240px',
-        md: '300px',
-        lg: '320px',
-        xl: '400px'
-      }}
-      src='logo-noborder.png'
-      alt='logo of Team Samsad'
+      // mx='auto'
+      // borderRadius='full'
+      // objectFit='cover'
+      // boxSize={{
+      //   base: '160px',
+      //   sm: '240px',
+      //   md: '300px',
+      //   lg: '320px',
+      //   xl: '400px'
+      // }}
+      // boxSize='150px'
+      className='aboutImage'
+      src={`/${src}`}
+      width='150px'
+      height='150px'
+      loading='eager'
+      alt={alt}
     />
   )
 }

@@ -28,7 +28,7 @@ const Navbar = ({ aboutRef, skillsRef, projectsRef, contactRef }) => {
       justify='space-between'
       align='center'
       direction='row'
-      position='relative'
+      // position='relative'
     >
       <NavMenu
         aboutRef={aboutRef}

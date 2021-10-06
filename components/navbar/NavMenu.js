@@ -102,8 +102,8 @@ const NavMenuItem = ({ handleClick, children, ...props }) => {
         mx={{ lg: '1.5em' }}
       >
         <NextLink
-          href={`/#${children.toLowerCase()}`}
-          to={`/#${children.toLowerCase()}`}
+          href={children === 'About' ? '/about' : `/#${children.toLowerCase()}`}
+          to={children === 'About' ? '/about' : `/#${children.toLowerCase()}`}
           passHref={true}
         >
           <Link _hover={{ color: secondary, textDecoration: 'none' }}>

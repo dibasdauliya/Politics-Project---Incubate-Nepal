@@ -15,7 +15,7 @@ import {
 import { useState } from 'react'
 import SpherePulse from '@/assets/motion/SpherePulse'
 import { Line, SectionHeader } from '@/components/layout'
-import { Title, Bullet, Heading3, Body } from '@/components/typography'
+import { Title, Heading3, Body } from '@/components/typography'
 import useColorSwitcher from '@/utils/hooks/useColorSwitcher'
 import {
   FaCheckCircle,
@@ -123,7 +123,7 @@ function Quiz({ ...props }) {
     e.preventDefault()
   }
 
-  function rightClick() {
+  function rightClick(e) {
     position < quiz.length && setPos((pos) => pos + 1)
     setClicked(false)
     e.preventDefault()

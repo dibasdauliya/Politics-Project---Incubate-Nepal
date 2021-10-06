@@ -49,3 +49,8 @@
     display: block;
   }
 }
+
+.aboutImage {
+  object-fit: cover;
+  border-radius: 100%;
+}
