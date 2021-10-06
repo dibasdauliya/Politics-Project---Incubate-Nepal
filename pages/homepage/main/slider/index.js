@@ -154,7 +154,7 @@ const SliderPart = ({ ...props }) => {
           {pr_w_req < pr_count ? (
             <Bullet
               as='li'
-              color={`${colorMode === 'light' ? 'green.600' : 'green.300'}`}
+              color={`${colorMode === 'light' ? 'green.700' : 'green.300'}`}
             >
               This configuration doesn&apos;t breach constitutional requirement.
             </Bullet>
@@ -177,7 +177,7 @@ const SliderPart = ({ ...props }) => {
           {pr_w_req < pr_count ? (
             <Bullet
               as='li'
-              color={`${colorMode === 'light' ? 'green.600' : 'green.300'}`}
+              color={`${colorMode === 'light' ? 'green.700' : 'green.300'}`}
             >
               Minimum percentage of women in the parliament ensured:{' '}
               {(((pr_w_req + women_sent) / 334) * 100).toFixed(2)}

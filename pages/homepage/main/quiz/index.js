@@ -171,7 +171,8 @@ function Quiz({ ...props }) {
               }`}
               onClick={leftClick}
               display='block'
-              padding='2em'
+              // padding='2em'
+              padding={{ base: '0.5em', md: '1em', xl: '2em' }}
             >
               <FaChevronCircleLeft />
             </Link>
@@ -278,7 +279,7 @@ function Quiz({ ...props }) {
               onClick={rightClick}
               display='block'
               height='100%'
-              padding='2em'
+              padding={{ base: '0.5em', md: '1em', xl: '2em' }}
             >
               <FaChevronCircleRight />
             </Link>
