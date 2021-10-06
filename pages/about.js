@@ -111,10 +111,14 @@ export default function About() {
             </Flex>
 
             <Flex
+              alignContent='center'
+              alignItems='center'
               justifyContent='center'
               gridGap='1.5em'
               //   direction={{ base: 'column-reverse', xl: 'row' }}
               flexWrap='wrap'
+              width='70%'
+              mx='auto'
             >
               <AboutImage
                 src='logo-noborder.png'

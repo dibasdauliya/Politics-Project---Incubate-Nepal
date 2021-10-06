@@ -87,6 +87,14 @@ function Quiz({ ...props }) {
         { answer: 'hi4', isCorrect: false }
       ],
       link: 'link for ques 4'
+    },
+    {
+      question: 'yes no',
+      answers: [
+        { answer: 'yes', isCorrect: true },
+        { answer: 'no', isCorrect: false }
+      ],
+      link: 'five'
     }
   ]
 
@@ -114,6 +122,10 @@ function Quiz({ ...props }) {
         })
         setIsCorrect(false)
       }
+
+      setTimeout(() => {
+        rightClick()
+      }, 3000)
     }
   }
 
@@ -123,10 +135,10 @@ function Quiz({ ...props }) {
     e.preventDefault()
   }
 
-  function rightClick(e) {
+  function rightClick() {
     position < quiz.length && setPos((pos) => pos + 1)
     setClicked(false)
-    e.preventDefault()
+    // e.preventDefault()
   }
 
   function startAgain() {
