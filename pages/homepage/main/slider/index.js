@@ -80,9 +80,7 @@ const SliderPart = ({ ...props }) => {
             onChange={(val) => setUpperHouse(val)}
           >
             <SliderTrack />
-            <SliderThumb boxSize={6} bg={secondary}>
-              <SpherePulse fontSize='2em' />
-            </SliderThumb>
+            <SliderThumb boxSize={5} bg={secondary} />
           </Slider>
         </Box>
 
@@ -97,9 +95,7 @@ const SliderPart = ({ ...props }) => {
             onChange={(val) => setFPTP(val)}
           >
             <SliderTrack />
-            <SliderThumb boxSize={6} bg={secondary}>
-              <SpherePulse fontSize='2em' />
-            </SliderThumb>
+            <SliderThumb boxSize={5} bg={secondary} />
           </Slider>
         </Box>
 
@@ -114,9 +110,7 @@ const SliderPart = ({ ...props }) => {
             onChange={(val) => setRatio(val)}
           >
             <SliderTrack />
-            <SliderThumb boxSize={6} bg={secondary}>
-              <SpherePulse fontSize='2em' />
-            </SliderThumb>
+            <SliderThumb boxSize={5} bg={secondary} />
           </Slider>
         </Box>
 
