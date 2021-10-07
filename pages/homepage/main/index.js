@@ -16,10 +16,10 @@ const Main = ({ aboutRef, skillsRef, projectsRef, contactRef }) => {
         w={{ xl: '90%' }}
       />
       <SkipNavContent>
-        <Articles id='articles' mb='20vh' />
+        <Quiz id='quiz' mb='20vh' />
       </SkipNavContent>
+      <Articles id='articles' mb='20vh' />
       <SliderPart id='slider' mb='20vh' />
-      <Quiz id='quiz' mb='20vh' />
       {/* <Lorem id='about' mb='20vh' ref={aboutRef} /> */}
 
       {/* <Skills ref={skillsRef} id="skills" pt="10vh" mb="25vh" />

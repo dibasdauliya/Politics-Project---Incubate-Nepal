@@ -24,7 +24,7 @@ const Navbar = ({ aboutRef, skillsRef, projectsRef, contactRef }) => {
       px='20px'
       maxW='1200px'
       // w={{ base: '100%', md: '90%', lg: '80%' }}
-      mt='3'
+      // mt='3'
       justify='space-between'
       align='center'
       direction='row'
@@ -38,7 +38,7 @@ const Navbar = ({ aboutRef, skillsRef, projectsRef, contactRef }) => {
       />
 
       <NextLink to='/' href='/' passHref={true}>
-        <Link order={{ lg: -1 }}>
+        <Link order={{ lg: -1 }} mt='0.5em'>
           {/* <Icon
             stroke={colorDark}
             strokeWidth='2px'

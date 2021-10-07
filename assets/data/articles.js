@@ -10,14 +10,14 @@ const data = [
     id: 1,
     title: 'Minority representation',
     description:
-      'What are the factors that determine if a specific caste or ethnic group is Minor? Why is minority representation necessary? Are the minorities well represented in Parliament? Should women be considered as a minority? Why are they underrepresented? The struggle of minority women Over representation of Khas Aryas in the Parliament',
+      'Who are the minorities? Is minority representation really necessary ? Why are some ethnic groups overrepresented ?',
     slug: 'minority-representation'
   },
   {
     id: 2,
     title: 'Introduction to electoral systems in Nepal ',
     description:
-      'Which electoral system is used and how? Advantages and Disadvantages of Electoral Constituencies. Mixed Electoral System. Advantages and Disadvantages of FPTP and PR. Necessity of Mixed Electoral System. Can the FPTP:PR ratio be changed in any way without breaching the constitution?',
+      'The electoral system of Nepal has come a long way. What do you think were the new implementations made during the promulgation of constitution on 2072 BS?',
     slug: 'introduction-to-electoral-systems-in-nepal'
   },
   {
@@ -25,7 +25,7 @@ const data = [
     title:
       'Legal provisions for representation of minorities and underrepresented',
     description:
-      'Rules for making a PR list in HoR: A closed list of at least 10% of total seats and at most the total seats must be submitted. 50% of candidates in the list need to be women. The list should resemble people from Dalit, Adibasi/Janajati, Tharu, Madhesi, Khas-Arya, Muslim as per the mentioned percentage as far as possible. Disadvantaged groups and physically challenged people',
+      'What does the constitution state about the requirements for the representation of minorities and underrepresented? Are women well represented? Do all ethnic groups have mechanisms set in the constitution to ensure their voices are heard? What is the present situation?',
     slug: 'article-4'
   },
   {
