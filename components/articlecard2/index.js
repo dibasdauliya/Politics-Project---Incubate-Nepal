@@ -17,7 +17,7 @@ export const ArticleCardAside = ({ title, description, slug }) => {
           <Link color={secondary}>{title}</Link>
         </NextLink>
       </Body>
-      <Text fontSize='sm' noOfLines={3} mb='1em'>
+      <Text fontSize='sm' noOfLines={3} mb='1.5em'>
         {description}
       </Text>
     </>

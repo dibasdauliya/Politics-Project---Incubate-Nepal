@@ -1,6 +1,3 @@
-body {
-  font-family: 'system-ui', sans-serif;
-}
 @media screen and (max-width: 1279px) {
   svg.bubbles {
     margin-top: 1rem !important;

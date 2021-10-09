@@ -3,8 +3,8 @@ const data = [
     id: 0,
     title: 'Changes in Governance Structure in Nepal',
     description:
-      "The Unification of Nepal: The country, which we call Nepal today, was divided into many smaller states before 1743 AD.  The unification of Nepal officially... Rana Regime: Kaji Junga Bahadur Kunwar, another interesting person in Nepal's history, executed Kot Massacre on 14th  September",
-    slug: 'article-1'
+      "How did the structure of Government of Nepal change from Prithvi Narayan Shah's autocratic family monarchy to today's Federal Democratic Republic? What sort of power and rights did general Nepalese people enjoy during this time?",
+    slug: 'changes-in-governance-structure-in-nepal'
   },
   {
     id: 1,

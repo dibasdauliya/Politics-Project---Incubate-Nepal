@@ -35,66 +35,118 @@ function Quiz({ ...props }) {
 
   const [weakPoint, setWeak] = useState([])
 
+  const newWeakPoint = new Set(weakPoint)
+
   const quiz = [
     {
-      question: 'This is question 1 This is question 1This is question 1',
+      question: 'Which minority dominates the parliament of Nepal?',
       answers: [
         {
-          answer: 'hi1',
-          isCorrect: false
-        },
-        { answer: 'hi2', isCorrect: false },
-        { answer: 'hi3 (um)', isCorrect: true },
-        { answer: 'hi4', isCorrect: false }
-      ],
-      link: 'link for ques 1'
-    },
-    {
-      question: 'This is question 2',
-      answers: [
-        {
-          answer: 'hi1',
-          isCorrect: false
-        },
-        { answer: 'hi2 (um)', isCorrect: true },
-        { answer: 'hi3', isCorrect: false },
-        { answer: 'hi4', isCorrect: false }
-      ],
-      link: 'link for ques 2'
-    },
-    {
-      question: 'This is question 3',
-      answers: [
-        {
-          answer: 'hi1',
-          isCorrect: false
-        },
-        { answer: 'hi2', isCorrect: false },
-        { answer: 'hi3', isCorrect: false },
-        { answer: 'hi4 (um)', isCorrect: true }
-      ],
-      link: 'link for ques 3'
-    },
-    {
-      question: 'This is question 4',
-      answers: [
-        {
-          answer: 'hi1 (um)',
+          answer: 'Khas arya',
           isCorrect: true
         },
-        { answer: 'hi2', isCorrect: false },
-        { answer: 'hi3', isCorrect: false },
-        { answer: 'hi4', isCorrect: false }
+        { answer: 'Tharu', isCorrect: false },
+        { answer: 'Dalit', isCorrect: false },
+        { answer: 'Adibasi', isCorrect: false }
       ],
-      link: 'link for ques 4'
+      link: 'minority-representation'
     },
     {
-      question: 'yes no',
+      question:
+        'Who is the only non-Khas Prime minister in the history of Nepal?',
       answers: [
-        { answer: 'yes', isCorrect: true },
-        { answer: 'no', isCorrect: false }
+        {
+          answer: 'Marich Man Singh Shrestha',
+          isCorrect: true
+        },
+        { answer: 'Tanka Prasad Acharya', isCorrect: false },
+        { answer: 'Surya Bahadur Thapa', isCorrect: false },
+        { answer: 'Gehendra Bahadur Rajbhandari', isCorrect: false }
       ],
-      link: 'five'
+      link: 'minority-representation'
+    },
+    {
+      question:
+        'What percent of women should be there in the parliament of Nepal according to the constitution of Nepal?',
+      answers: [
+        {
+          answer: '33.33%',
+          isCorrect: true
+        },
+        { answer: '20%', isCorrect: false },
+        { answer: '50.2%', isCorrect: false },
+        { answer: '16.67%', isCorrect: false }
+      ],
+      link: 'minority-representation'
+    },
+    {
+      question: 'How many electoral constituencies does Kathmandu have?',
+      answers: [
+        {
+          answer: '3',
+          isCorrect: false
+        },
+        { answer: '10', isCorrect: true },
+        { answer: '15', isCorrect: false },
+        { answer: '8', isCorrect: false }
+      ],
+      link: 'electoral-constituency-division'
+    },
+    {
+      question:
+        'What percent approximates the number of women directly elected to the lower house of the federal parliament in Nepal in the present?',
+      answers: [
+        { answer: '33%', isCorrect: false },
+        { answer: '2.57%', isCorrect: false },
+        { answer: '25%', isCorrect: false },
+        { answer: '3.64%', isCorrect: true }
+      ],
+      link: 'article-4'
+    },
+
+    {
+      question:
+        'What percent of representatives are chosen from the First Past the Post?',
+      answers: [
+        { answer: '20%', isCorrect: false },
+        { answer: '80%', isCorrect: false },
+        { answer: '100%', isCorrect: false },
+        { answer: '60%', isCorrect: true }
+      ],
+      link: 'introduction-to-electoral-systems-in-nepal'
+    },
+    {
+      question:
+        'What is the minimum number of electoral constituencies in each district?',
+      answers: [
+        { answer: '2', isCorrect: false },
+        { answer: '0', isCorrect: false },
+        { answer: '3', isCorrect: false },
+        { answer: '1', isCorrect: true }
+      ],
+      link: 'introduction-to-electoral-systems-in-nepal'
+    },
+    {
+      question: 'Which was the last Hindu country of the world?',
+      answers: [
+        { answer: 'India', isCorrect: false },
+        { answer: 'Nepal', isCorrect: true },
+        { answer: 'Mauritius', isCorrect: false },
+        { answer: 'Cambodia', isCorrect: false }
+      ],
+      link: 'changes-in-governance-structure-in-nepal'
+    },
+
+    {
+      question:
+        'All three of my sons became Prime Ministers of Nepal. Who am I?',
+      answers: [
+        { answer: 'Krishna Prasad Koirala', isCorrect: true },
+        { answer: 'Junga Bahadur Rana', isCorrect: false },
+        { answer: 'Chandra Shumsher JBR', isCorrect: false },
+        { answer: 'Bhim Shumsher JBR', isCorrect: false }
+      ],
+      link: 'changes-in-governance-structure-in-nepal'
     }
   ]
 
@@ -103,6 +155,8 @@ function Quiz({ ...props }) {
   const { colorMode } = useColorMode()
 
   const light = colorMode === 'light'
+
+  let timeout
 
   function handleClick(isCorrect) {
     setClicked(true)
@@ -123,19 +177,26 @@ function Quiz({ ...props }) {
         setIsCorrect(false)
       }
 
-      setTimeout(() => {
+      // if (timeout) {
+      //   clearTimeout(timeout)
+      //   timeout = null
+      // } else {
+      timeout = setTimeout(() => {
         rightClick()
       }, 3000)
+      // }
     }
   }
 
   function leftClick(e) {
+    clearTimeout(timeout)
     if (position !== 0 && position < quiz.length) setPos((pos) => pos - 1)
     setClicked(false)
     e.preventDefault()
   }
 
   function rightClick() {
+    clearTimeout(timeout)
     position < quiz.length && setPos((pos) => pos + 1)
     setClicked(false)
     // e.preventDefault()
@@ -145,6 +206,23 @@ function Quiz({ ...props }) {
     setPos(0)
     setScore(0)
     setWeak([])
+  }
+
+  function formateProjectName(name) {
+    if (name === 'article-4')
+      return 'Legal Provisions for Representation of Minorities and Underrepresented'
+    else {
+      return name
+        .split('-')
+        .map((word) => {
+          if (word === 'to' || word === 'in') {
+            return word[0].toLowerCase() + word.slice(1)
+          } else {
+            return word[0].toUpperCase() + word.slice(1)
+          }
+        })
+        .join(' ')
+    }
   }
 
   return (
@@ -189,27 +267,29 @@ function Quiz({ ...props }) {
                   </Heading3>
 
                   <Box textAlign='center'>
-                    {quiz[position].answers.map(({ answer, isCorrect }) => {
-                      return (
-                        <Button
-                          mt='1.5'
-                          ml='2'
-                          textColor={`${light ? 'white' : 'black'}`}
-                          key={answer}
-                          onClick={() => handleClick(isCorrect)}
-                          _hover={{ opacity: 0.9 }}
-                          backgroundColor={`${
-                            clicked
-                              ? isCorrect
-                                ? 'green'
+                    {quiz[position].answers.map(
+                      ({ answer, isCorrect }, idx) => {
+                        return (
+                          <Button
+                            mt='1.5'
+                            ml='2'
+                            textColor={`${light ? 'white' : 'black'}`}
+                            key={idx}
+                            onClick={() => handleClick(isCorrect)}
+                            _hover={{ opacity: 0.9 }}
+                            backgroundColor={`${
+                              clicked
+                                ? isCorrect
+                                  ? 'green'
+                                  : secondary
                                 : secondary
-                              : secondary
-                          }`}
-                        >
-                          {answer}
-                        </Button>
-                      )
-                    })}
+                            }`}
+                          >
+                            {answer}
+                          </Button>
+                        )
+                      }
+                    )}
                   </Box>
                   <Box minH='30px' textAlign='center'>
                     {info === true &&
@@ -236,7 +316,7 @@ function Quiz({ ...props }) {
                 </Stack>
               </>
             ) : (
-              <Flex flexDir='column' gridGap='1.5em'>
+              <Flex flexDir='column' gridGap='1.5em' px='1em'>
                 <Stack textAlign='center'>
                   <Heading3>Total points: {score}</Heading3>
                   <Button roundedBottom onClick={startAgain}>
@@ -250,10 +330,20 @@ function Quiz({ ...props }) {
                         Recommended articles to improve your results 📈:
                       </Body>
                       <List spacing={2}>
-                        {weakPoint.map((link, idx) => (
+                        {[...newWeakPoint].map((link, idx) => (
                           <ListItem key={idx}>
                             <ListIcon as={CBullet} />
-                            {link}
+
+                            <Link
+                              // _hover={{
+                              //   color: secondary,
+                              //   textDecoration: 'none'
+                              // }}
+                              href={`/article/${link}`}
+                              target='_blank'
+                            >
+                              {formateProjectName(link)}
+                            </Link>
                           </ListItem>
                         ))}
                       </List>
