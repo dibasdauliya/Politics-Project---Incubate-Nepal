@@ -13,7 +13,7 @@ const Homepage = () => {
     <>
       <Button
         as='a'
-        href='#articles'
+        href='#quiz'
         position='absolute'
         transform='translateX(-100%)'
         transition='transform 0.3s'

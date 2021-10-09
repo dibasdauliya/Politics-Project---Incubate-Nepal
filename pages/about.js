@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import data from '@/assets/data/articles.js'
 import Header from '@/components/header'
 import Footer from '@/components/footer'
@@ -52,6 +53,29 @@ const AboutImage = ({ src, alt, role, twitter, linkedin }) => {
   )
 }
 
+const TeamCard = ({ fd, children, src, alt, role, twitter, linkedin }) => {
+  return (
+    <Flex
+      gridGap='1em'
+      justifyContent='center'
+      flexWrap='wrap'
+      mb='2em'
+      flexDirection={fd ? fd : 'row'}
+    >
+      <AboutImage
+        src={src}
+        alt={alt}
+        role={role}
+        twitter={twitter}
+        linkedin={linkedin}
+      />
+      <Text alignSelf='center' width='60ch'>
+        {children}
+      </Text>
+    </Flex>
+  )
+}
+
 export default function About() {
   const { hoverLight2 } = useColorSwitcher()
 
@@ -71,23 +95,20 @@ export default function About() {
               {title}
             </Heading>
             <Text mb='1.5em'>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
-              vel expedita autem maiores quod culpa libero facere ab, omnis
-              perferendis suscipit natus et quae repellat sequi reiciendis
-              fugiat ut cumque amet? Quidem delectus, assumenda amet harum
-              voluptatibus ipsam nemo saepe!
+              The six of us were fortunate enough to be a part of the second
+              chapter of Incubate Nepal: an 8-week long virtual program that
+              connects some of the most talented students from all over Nepal to
+              collaborate on open ended projects. Mentored by our very own
+              Bhushan Suwal dai and Co-mentored by Aayushka Budhathoki, the
+              project focuses on the Representation in the Legislative
+              Parliament of Nepal. What started with countless of layman
+              opinions about politics gradually consolidated into factual
+              information and rational analysis. The group name "Team Samsad"
+              which was initially titled for fun proved to be a thread which
+              connected the group into a close knitted circle.
             </Text>
             <Heading3>Our Team</Heading3>
-            {/* <Flex>
-              <Image
-                src='/dibas.jpg'
-                width='300px'
-                height='300px'
-                alt='Dibas Dauliya'
-                objectFit='cover'
-                boxSize={450}
-              />
-            </Flex> */}
+
             <Flex
               justifyContent='center'
               flexWrap='wrap'
@@ -110,59 +131,93 @@ export default function About() {
               />
             </Flex>
 
-            <Flex
-              alignContent='center'
-              alignItems='center'
-              justifyContent='center'
-              gridGap='1.5em'
-              //   direction={{ base: 'column-reverse', xl: 'row' }}
-              flexWrap='wrap'
-              width='70%'
-              mx='auto'
+            <TeamCard
+              src='logo-noborder.png'
+              alt='Aayusha Dhungana'
+              role='role'
+              twitter='twitter'
+              linkedin='linkedin'
             >
-              <AboutImage
-                src='logo-noborder.png'
-                alt='Aayusha Dhungana'
-                role='role'
-                twitter='twitter'
-                linkedin='linkedin'
-              />
-              <AboutImage
-                src='logo-noborder.png'
-                alt='Bikash Agrawal'
-                role='role'
-                twitter='twitter'
-                linkedin='linkedin'
-              />
-              <AboutImage
-                src='logo-noborder.png'
-                alt='Dibas Dauliya'
-                role='role'
-                twitter='twitter'
-                linkedin='linkedin'
-              />
-              <AboutImage
-                src='logo-noborder.png'
-                alt='Manoj Dhakal'
-                role='role'
-                twitter='twitter'
-                linkedin='linkedin'
-              />
-              <AboutImage
-                src='logo-noborder.png'
-                alt='Rojeena Thapa'
-                role='role'
-                twitter='twitter'
-                linkedin='linkedin'
-              />
-              <AboutImage
-                src='logo-noborder.png'
-                alt='Lajju Shrestha'
-                role='role'
-                twitter='twitter'
-                linkedin='linkedin'
-              />
-            </Flex>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis
+              eveniet dolores accusamus tenetur, porro cupiditate beatae
+              aperiam! Non natus beatae, fugit iste repellat voluptatum eligendi
+              optio est obcaecati tempore nisi cupiditate impedit explicabo
+              suscipit quidem sed similique inventore reprehenderit aliquid.
+            </TeamCard>
+
+            <TeamCard
+              src='logo-noborder.png'
+              alt='Bikash Agrawal'
+              role='role'
+              twitter='twitter'
+              linkedin='linkedin'
+              fd='row-reverse'
+            >
+              As a student from science background, it was sort of a fun task to
+              look into laws and politics but as we dig deeper it became clearer
+              that there is much more to learn about our own country and its
+              working mechanism. This journey became pleasant due to the
+              presence of my lovely fellow travelers. I learnt a lot about
+              working together.
+            </TeamCard>
+
+            <TeamCard
+              src='dibas.jpg'
+              alt='Dibas Dauliya'
+              role='role'
+              twitter='twitter'
+              linkedin='linkedin'
+            >
+              This fantastic project helped me to be more social, improving my
+              presentation and networking skills. I also elevated my
+              problem-solving skills and learned more about researching the
+              facts and dealing with the different perspectives of many articles
+              by discussing them with energetic teammates. I am thankful to all
+              the members for their inspiration and motivation.
+            </TeamCard>
+
+            <TeamCard
+              src='manoj.jpg'
+              alt='Manoj Dhakal'
+              role='role'
+              twitter='twitter'
+              linkedin='linkedin'
+              fd='row-reverse'
+            >
+              This project made me realize how we have a general tendency to
+              make opinions without things, without evidence. In addition to
+              looking at my opinions, I now look at why I hold them.
+            </TeamCard>
+
+            <TeamCard
+              src='rojeena.jpeg'
+              alt='Rojeena Thapa'
+              role='role'
+              twitter='twitter'
+              linkedin='linkedin'
+            >
+              Incubate Nepal was an exhilarating process for me. What I thought
+              to be a rigorous project was all about fun discussions, common
+              conclusions and gaining an insight of the political system of
+              Nepal. Apart from the main project itself, grateful to have formed
+              amazing connections with such talented teammates.
+            </TeamCard>
+
+            <TeamCard
+              src='logo-noborder.png'
+              alt='Lajju Shrestha'
+              role='role'
+              twitter='twitter'
+              linkedin='linkedin'
+              fd='row-reverse'
+            >
+              This 8-week long project was an insightful journey where I was not
+              only able to connect and work with intellectuals but also learn
+              about multiple existing laws, gain insights about various topics,
+              and be a part of the discussion, which is often neglected in our
+              society. This project shaped my perspective about the different
+              aspect that is considered while making national-level policies.
+            </TeamCard>
           </Box>
         </Box>
       </MainLayout>

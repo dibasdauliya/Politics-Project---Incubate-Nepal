@@ -10,7 +10,14 @@ const Articles = ({ ...props }) => {
   const [articles, setArticles] = useState(data)
 
   return (
-    <Box as='section' outline='0' tabIndex={-1} {...props} w='100%'>
+    <Box
+      sx={{ scrollMarginTop: '7em' }}
+      as='section'
+      outline='0'
+      tabIndex={-1}
+      {...props}
+      w='100%'
+    >
       <Box w='100%' mb={{ base: '32px', md: '64px', xl: '100px' }}>
         <SectionHeader sibling={<Line />} mr='16px'>
           <Flex alignItems='center' alignContent='center'>

@@ -48,7 +48,14 @@ const SliderPart = ({ ...props }) => {
   }
 
   return (
-    <Box as='section' outline='0' tabIndex={-1} {...props} w='100%'>
+    <Box
+      sx={{ scrollMarginTop: '7em' }}
+      as='section'
+      outline='0'
+      tabIndex={-1}
+      {...props}
+      w='100%'
+    >
       <Box w='100%' mb={{ base: '20px', md: '40px', xl: '66px' }}>
         <SectionHeader sibling={<Line />} mr='16px'>
           <Flex alignItems='center' alignContent='center'>
@@ -59,14 +66,18 @@ const SliderPart = ({ ...props }) => {
       </Box>
 
       <Box pr={{ base: '8px' }}>
-        {/* <Body mb={{ base: '30px', md: '42px', xl: '78px' }}>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quis, rerum,
-          nihil numquam quod officiis eum quaerat culpa hic ducimus doloremque
-          pariatur quas debitis beatae voluptate velit nesciunt repellendus.
-          Explicabo eaque adipisci quas dolore a, vel impedit aliquam quibusdam
-          dicta perspiciatis, aspernatur quos labore est, odit laborum molestias
-          laboriosam numquam. Laudantium!
-        </Body> */}
+        <Body mb='1.7em'>
+          This slider is for you to explore. The three sliders can be used to
+          set up the number of women in the parliament from the upper
+          house(which can range from 22 to 59), the percentage of women from all
+          members elected through FPTP system and the percentage ratio of
+          FPTP:PR. Feel free to change individual values and see if the
+          hypothetical scenario is possible according to the requirements of the
+          constitution. The requirement is that at least one-third(33.33%) of
+          women in the federal parliament must be women. Also feel free to
+          ponder why some permutations breach constitutional requirements while
+          some do not. Have an exciting journey with the sliders then!
+        </Body>
         <Heading3>Women from upper house ({upperHouse})</Heading3>
         <Box mx={{ base: '10px' }}>
           <Slider
