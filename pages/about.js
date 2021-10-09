@@ -132,21 +132,22 @@ export default function About() {
             </Flex>
 
             <TeamCard
-              src='logo-noborder.png'
+              src='aayusha.jpg'
               alt='Aayusha Dhungana'
               role='role'
               twitter='twitter'
               linkedin='linkedin'
             >
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis
-              eveniet dolores accusamus tenetur, porro cupiditate beatae
-              aperiam! Non natus beatae, fugit iste repellat voluptatum eligendi
-              optio est obcaecati tempore nisi cupiditate impedit explicabo
-              suscipit quidem sed similique inventore reprehenderit aliquid.
+              Politics and social affairs were never something I preferred
+              reading or discuss before. But, unexpectedly, this experience
+              pushed me to dig into a wide range of the country's political
+              situation that changed my overall perspective in this area. Also,
+              getting to work with highly motivating and supportive teammates
+              was one of the best parts of this program. VERY GRATEFUL!
             </TeamCard>
 
             <TeamCard
-              src='logo-noborder.png'
+              src='bikash.jpg'
               alt='Bikash Agrawal'
               role='role'
               twitter='twitter'
@@ -190,7 +191,7 @@ export default function About() {
             </TeamCard>
 
             <TeamCard
-              src='rojeena.jpeg'
+              src='rojeena.jpg'
               alt='Rojeena Thapa'
               role='role'
               twitter='twitter'
@@ -204,7 +205,7 @@ export default function About() {
             </TeamCard>
 
             <TeamCard
-              src='logo-noborder.png'
+              src='lajju.jpg'
               alt='Lajju Shrestha'
               role='role'
               twitter='twitter'
