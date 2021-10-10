@@ -166,7 +166,7 @@ function Quiz({ ...props }) {
       showInfo(true)
       setTimeout(() => {
         showInfo(false)
-      }, 2000)
+      }, 1000)
       if (isCorrect) {
         setScore((p) => p + 1)
         setIsCorrect(true)
@@ -184,7 +184,7 @@ function Quiz({ ...props }) {
       // } else {
       timeout = setTimeout(() => {
         rightClick()
-      }, 3000)
+      }, 2000)
       //   }
     }
   }
