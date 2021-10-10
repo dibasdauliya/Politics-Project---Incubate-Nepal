@@ -7,7 +7,11 @@ export default function Article() {
   const title = 'Changes in Governance Structure in Nepal'
 
   return (
-    <ArticleLayout title={title}>
+    <ArticleLayout
+      title={title}
+      image='Change in Governance system2.jpeg'
+      alt='people are in streets, flag of Nepal is in their hand, and police is standing to control if the situation worsens'
+    >
       <Box mb='2em'>
         <Heading3>The Unification of Nepal</Heading3>
         <Text>

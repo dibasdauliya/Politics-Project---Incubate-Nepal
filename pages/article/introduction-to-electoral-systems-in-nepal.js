@@ -8,7 +8,11 @@ export default function Article() {
   const title = 'Introduction to electoral systems in Nepal'
 
   return (
-    <ArticleLayout title={title}>
+    <ArticleLayout
+      title={title}
+      image='intro to electoral system.jpeg'
+      alt='a man with red cap is pasting the poster in voting box'
+    >
       <Text mb='1em'>
         An electoral system or voting system is a set of rules that determine
         how elections and referendums are conducted and how their results are

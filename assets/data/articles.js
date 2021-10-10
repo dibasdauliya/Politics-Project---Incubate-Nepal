@@ -15,7 +15,7 @@ const data = [
   },
   {
     id: 2,
-    title: 'Introduction to electoral systems in Nepal ',
+    title: 'Introduction to electoral systems in Nepal',
     description:
       'The electoral system of Nepal has come a long way. What do you think were the new implementations made during the promulgation of constitution on 2072 BS?',
     slug: 'introduction-to-electoral-systems-in-nepal'

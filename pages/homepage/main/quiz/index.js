@@ -341,9 +341,9 @@ function Quiz({ ...props }) {
                       <Body>
                         Recommended{' '}
                         {[...newWeakPoint].length === 1
-                          ? 'article to improve your result'
-                          : 'articles to improve your results'}{' '}
-                        📈:
+                          ? 'article'
+                          : 'articles'}{' '}
+                        to improve your result 📈:
                       </Body>
                       <List spacing={2}>
                         {[...newWeakPoint].map((link, idx) => (

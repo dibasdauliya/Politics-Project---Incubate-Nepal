@@ -26,7 +26,11 @@ export default function Article() {
     'Legal provisions for representation of minorities and underrepresented'
 
   return (
-    <ArticleLayout title={title}>
+    <ArticleLayout
+      title={title}
+      image='legal provision for Minority representation.jpeg'
+      alt='politicians standing in samsad and clapping hand'
+    >
       <Stack spacing='2em'>
         <Box>
           <Heading3>Rules for making a PR list in HoR:</Heading3>

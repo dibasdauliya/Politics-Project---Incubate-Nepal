@@ -19,7 +19,11 @@ export default function Article() {
   const title = 'Minority representation'
 
   return (
-    <ArticleLayout title={title}>
+    <ArticleLayout
+      title={title}
+      image='minority rep.jpeg'
+      alt='women are standing and listening the lecture with smile'
+    >
       <Text mb='1em'>
         A minority group refers to the group of people whose practices, race,
         religion, ethnicity, or characteristics are often in few numbers leading
