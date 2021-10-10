@@ -1,24 +1,24 @@
-import { createIcon, defaultProps, Icon } from "@chakra-ui/react";
-import { motion } from "framer-motion";
-import React from "react";
+import { createIcon, defaultProps, Icon } from '@chakra-ui/react'
+import { motion, useMotionValue } from 'framer-motion'
+import React from 'react'
 
 const groupVariants = {
   hidden: {
-    opacity: 0,
+    opacity: 0
   },
   visible: {
     opacity: 1,
     transition: {
       delayChildren: 0.2,
       staggerChildren: 0.1,
-      duration: 1,
-    },
-  },
-};
+      duration: 1
+    }
+  }
+}
 
 const child = {
   hidden: {
-    opacity: 0,
+    opacity: 0
   },
   visible: {
     opacity: 1,
@@ -27,46 +27,380 @@ const child = {
     translateY: [-1, 0, 1, 0, -1],
     translateX: [-1, 0, 1, 0, -1],
     transition: {
-      duration: 1,
-    },
-  },
-};
+      duration: 1
+    }
+  }
+}
 
 export const CircleArray = createIcon({
   defaultProps,
-  displayName: "CircleArray",
-  viewBox: "0 0 100 100",
+  displayName: 'CircleArray',
+  viewBox: '0 0 100 100',
   path: (
-    <motion.g variants={groupVariants} initial="hidden" animate="visible">
+    <motion.g variants={groupVariants} initial='hidden' animate='visible'>
+      {/* one */}
       <motion.circle
         variants={child}
         whileTap={{
           fillOpacity: 1,
-          transition: { duration: 0.5 },
+          transition: { duration: 0.5 }
         }}
         whileHover={{
           fillOpacity: 1,
-          transition: { duration: 0.5 },
+          transition: { duration: 0.5 }
         }}
-        cx="47.8211975"
-        cy="45.7652626"
-        r="10.5989332"
+        cx='47.8211975'
+        cy='35.7652626'
+        r='8'
+      ></motion.circle>
+      {/* two - right */}
+      <motion.circle
+        variants={child}
+        whileTap={{
+          fillOpacity: 1,
+          transition: { duration: 0.5 }
+        }}
+        whileHover={{
+          fillOpacity: 1,
+          transition: { duration: 0.5 }
+        }}
+        cx='80.8211975'
+        cy='35.7652626'
+        r='8'
+      ></motion.circle>
+
+      <motion.circle
+        variants={child}
+        whileTap={{
+          fillOpacity: 1,
+          transition: { duration: 0.5 }
+        }}
+        whileHover={{
+          fillOpacity: 1,
+          transition: { duration: 0.5 }
+        }}
+        cx='80.8211975'
+        cy='55.7652626'
+        r='8'
+      ></motion.circle>
+
+      {/* right last down */}
+      <motion.circle
+        variants={child}
+        whileTap={{
+          fillOpacity: 1,
+          transition: { duration: 0.5 }
+        }}
+        whileHover={{
+          fillOpacity: 1,
+          transition: { duration: 0.5 }
+        }}
+        cx='85'
+        cy='75.7652626'
+        r='8'
+      ></motion.circle>
+
+      {/* left second down */}
+      <motion.circle
+        variants={child}
+        whileTap={{
+          fillOpacity: 1,
+          transition: { duration: 0.5 }
+        }}
+        whileHover={{
+          fillOpacity: 1,
+          transition: { duration: 0.5 }
+        }}
+        cx='47.8211975'
+        cy='55.7652626'
+        r='8'
+      ></motion.circle>
+
+      {/* left down last */}
+      <motion.circle
+        variants={child}
+        whileTap={{
+          fillOpacity: 1,
+          transition: { duration: 0.5 }
+        }}
+        whileHover={{
+          fillOpacity: 1,
+          transition: { duration: 0.5 }
+        }}
+        cx='43'
+        cy='75.7652626'
+        r='8'
+      ></motion.circle>
+
+      {/* middle last */}
+      <motion.circle
+        variants={child}
+        whileTap={{
+          fillOpacity: 1,
+          transition: { duration: 0.5 }
+        }}
+        whileHover={{
+          fillOpacity: 1,
+          transition: { duration: 0.5 }
+        }}
+        cx='64'
+        cy='75.7652626'
+        r='8'
+      ></motion.circle>
+
+      {/* 2nd small */}
+      <motion.circle
+        variants={child}
+        whileTap={{
+          fillOpacity: 1,
+          transition: { duration: 0.5 }
+        }}
+        whileHover={{
+          fillOpacity: 1,
+          transition: { duration: 0.5 }
+        }}
+        cx='64.2801208'
+        cy='22.4836693'
+        r='5.5'
+      ></motion.circle>
+
+      {/* side ko sano */}
+      <motion.circle
+        variants={child}
+        whileTap={{
+          fillOpacity: 1,
+          transition: { duration: 0.5 }
+        }}
+        whileHover={{
+          fillOpacity: 1,
+          transition: { duration: 0.5 }
+        }}
+        cx='35.2801208'
+        cy='30.4836693'
+        r='2.5'
+      ></motion.circle>
+
+      <motion.circle
+        variants={child}
+        whileTap={{
+          fillOpacity: 1,
+          transition: { duration: 0.5 }
+        }}
+        whileHover={{
+          fillOpacity: 1,
+          transition: { duration: 0.5 }
+        }}
+        cx='92.801208'
+        cy='30.4836693'
+        r='2.5'
+      ></motion.circle>
+
+      {/* third small */}
+      <motion.circle
+        variants={child}
+        whileTap={{
+          fillOpacity: 1,
+          transition: { duration: 0.5 }
+        }}
+        whileHover={{
+          fillOpacity: 1,
+          transition: { duration: 0.5 }
+        }}
+        cx='64.2801208'
+        cy='11.7836693'
+        r='2.5'
+      ></motion.circle>
+
+      <motion.circle
+        variants={child}
+        whileTap={{
+          fillOpacity: 1,
+          transition: { duration: 0.5 }
+        }}
+        whileHover={{
+          fillOpacity: 1,
+          transition: { duration: 0.5 }
+        }}
+        cx='64.2801208'
+        cy='4.4836693'
+        r='2.5'
+      ></motion.circle>
+
+      {/* bichha ko small */}
+      <motion.circle
+        variants={child}
+        whileTap={{
+          fillOpacity: 1,
+          transition: { duration: 0.5 }
+        }}
+        whileHover={{
+          fillOpacity: 1,
+          transition: { duration: 0.5 }
+        }}
+        cx='64.2801208'
+        cy='34'
+        r='2.5'
+      ></motion.circle>
+
+      <motion.circle
+        variants={child}
+        whileTap={{
+          fillOpacity: 1,
+          transition: { duration: 0.5 }
+        }}
+        whileHover={{
+          fillOpacity: 1,
+          transition: { duration: 0.5 }
+        }}
+        cx='64.2801208'
+        cy='41'
+        r='2.5'
+      ></motion.circle>
+
+      <motion.circle
+        variants={child}
+        whileTap={{
+          fillOpacity: 1,
+          transition: { duration: 0.5 }
+        }}
+        whileHover={{
+          fillOpacity: 1,
+          transition: { duration: 0.5 }
+        }}
+        cx='64.2801208'
+        cy='48'
+        r='2.5'
+      ></motion.circle>
+
+      <motion.circle
+        variants={child}
+        whileTap={{
+          fillOpacity: 1,
+          transition: { duration: 0.5 }
+        }}
+        whileHover={{
+          fillOpacity: 1,
+          transition: { duration: 0.5 }
+        }}
+        cx='64.2801208'
+        cy='55'
+        r='2.5'
+      ></motion.circle>
+
+      <motion.circle
+        variants={child}
+        whileTap={{
+          fillOpacity: 1,
+          transition: { duration: 0.5 }
+        }}
+        whileHover={{
+          fillOpacity: 1,
+          transition: { duration: 0.5 }
+        }}
+        cx='64.2801208'
+        cy='62'
+        r='2.5'
+      ></motion.circle>
+
+      {/* <motion.circle
+        variants={child}
+        whileTap={{
+          fillOpacity: 1,
+          transition: { duration: 0.5 }
+        }}
+        whileHover={{
+          fillOpacity: 1,
+          transition: { duration: 0.5 }
+        }}
+        cx='64.2801208'
+        cy='68'
+        r='2.5'
+      ></motion.circle> */}
+    </motion.g>
+  )
+})
+
+export const CircleArray2 = createIcon({
+  defaultProps,
+  displayName: 'CircleArray',
+  viewBox: '0 0 100 100',
+  path: (
+    <motion.g variants={groupVariants} initial='hidden' animate='visible'>
+      {/* one */}
+      <motion.circle
+        variants={child}
+        whileTap={{
+          fillOpacity: 1,
+          transition: { duration: 0.5 }
+        }}
+        whileHover={{
+          fillOpacity: 1,
+          transition: { duration: 0.5 }
+        }}
+        cx='47.8211975'
+        cy='35.7652626'
+        r='10.5989332'
+      ></motion.circle>
+      {/* two - right */}
+      <motion.circle
+        variants={child}
+        whileTap={{
+          fillOpacity: 1,
+          transition: { duration: 0.5 }
+        }}
+        whileHover={{
+          fillOpacity: 1,
+          transition: { duration: 0.5 }
+        }}
+        cx='80.8211975'
+        cy='35.7652626'
+        r='10.5989332'
+      ></motion.circle>
+      {/* 2nd down */}
+      <motion.circle
+        variants={child}
+        whileTap={{
+          fillOpacity: 1,
+          transition: { duration: 0.5 }
+        }}
+        whileHover={{
+          fillOpacity: 1,
+          transition: { duration: 0.5 }
+        }}
+        cx='80.8211975'
+        cy='65.7652626'
+        r='10.5989332'
+      ></motion.circle>
+      {/* thiss */}
+      <motion.circle
+        variants={child}
+        whileTap={{
+          fillOpacity: 1,
+          transition: { duration: 0.5 }
+        }}
+        whileHover={{
+          fillOpacity: 1,
+          transition: { duration: 0.5 }
+        }}
+        cx='47.8211975'
+        cy='65.7652626'
+        r='10.5989332'
       ></motion.circle>
       <motion.circle
         variants={child}
         whileTap={{
           fillOpacity: 1,
-          transition: { duration: 0.5 },
+          transition: { duration: 0.5 }
         }}
         whileHover={{
           fillOpacity: 1,
-          transition: { duration: 0.5 },
+          transition: { duration: 0.5 }
         }}
-        cx="63.2801208"
-        cy="39.4836693"
-        r="3.5781164"
+        cx='64.2801208'
+        cy='50.4836693'
+        r='5.5781164'
       ></motion.circle>
-      <motion.circle
+      {/* <motion.circle
         variants={child}
         whileTap={{
           fillOpacity: 1,
@@ -359,119 +693,121 @@ export const CircleArray = createIcon({
         cx="78.5843506"
         cy="59.0333977"
         r="3.0467765"
-      ></motion.circle>
-      <motion.circle
+      ></motion.circle> */}
+      {/* <motion.circle
         variants={child}
         whileTap={{
           fillOpacity: 1,
-          transition: { duration: 0.5 },
+          transition: { duration: 0.5 }
         }}
         whileHover={{
           fillOpacity: 1,
-          transition: { duration: 0.5 },
+          transition: { duration: 0.5 }
         }}
-        cx="69.6456299"
-        cy="64.7219467"
-        r="4.265645"
-      ></motion.circle>
-      <motion.circle
+        cx='69.6456299'
+        cy='64.7219467'
+        r='4.265645'
+      ></motion.circle> */}
+      {/* <motion.circle
         variants={child}
         whileTap={{
           fillOpacity: 1,
-          transition: { duration: 0.5 },
+          transition: { duration: 0.5 }
         }}
         whileHover={{
           fillOpacity: 1,
-          transition: { duration: 0.5 },
+          transition: { duration: 0.5 }
         }}
-        cx="56.6438293"
-        cy="57.2054749"
-        r="2.2348571"
-      ></motion.circle>
-      <motion.circle
+        cx='56.6438293'
+        cy='57.2054749'
+        r='2.2348571'
+      ></motion.circle> */}
+      {/* <motion.circle
         variants={child}
         whileTap={{
           fillOpacity: 1,
-          transition: { duration: 0.5 },
+          transition: { duration: 0.5 }
         }}
         whileHover={{
           fillOpacity: 1,
-          transition: { duration: 0.5 },
+          transition: { duration: 0.5 }
         }}
-        cx="51.7272644"
-        cy="91.7970047"
-        r="2.2348571"
-      ></motion.circle>
-      <motion.circle
+        cx='51.7272644'
+        cy='91.7970047'
+        r='2.2348571'
+      ></motion.circle> */}
+
+      {/* TODO thisssss */}
+      {/* <motion.circle
         variants={child}
         whileTap={{
           fillOpacity: 1,
-          transition: { duration: 0.5 },
+          transition: { duration: 0.5 }
         }}
         whileHover={{
           fillOpacity: 1,
-          transition: { duration: 0.5 },
+          transition: { duration: 0.5 }
         }}
-        cx="55.4251404"
-        cy="67.7685699"
-        r="6.7031717"
-      ></motion.circle>
-      <motion.circle
+        cx='55.4251404'
+        cy='67.7685699'
+        r='6.7031717'
+      ></motion.circle> */}
+      {/* <motion.circle
         variants={child}
         whileTap={{
           fillOpacity: 1,
-          transition: { duration: 0.5 },
+          transition: { duration: 0.5 }
         }}
         whileHover={{
           fillOpacity: 1,
-          transition: { duration: 0.5 },
+          transition: { duration: 0.5 }
         }}
-        cx="45.2675781"
-        cy="60.4556007"
-        r="2.8437576"
-      ></motion.circle>
-      <motion.circle
+        cx='45.2675781'
+        cy='60.4556007'
+        r='2.8437576'
+      ></motion.circle> */}
+      {/* <motion.circle
         variants={child}
         whileTap={{
           fillOpacity: 1,
-          transition: { duration: 0.5 },
+          transition: { duration: 0.5 }
         }}
         whileHover={{
           fillOpacity: 1,
-          transition: { duration: 0.5 },
+          transition: { duration: 0.5 }
         }}
-        cx="37.9544373"
-        cy="57.0020866"
-        r="2.4380357"
-      ></motion.circle>
-      <motion.circle
+        cx='37.9544373'
+        cy='57.0020866'
+        r='2.4380357'
+      ></motion.circle> */}
+      {/* <motion.circle
         variants={child}
         whileTap={{
           fillOpacity: 1,
-          transition: { duration: 0.5 },
+          transition: { duration: 0.5 }
         }}
         whileHover={{
           fillOpacity: 1,
-          transition: { duration: 0.5 },
+          transition: { duration: 0.5 }
         }}
-        cx="32.8760376"
-        cy="49.0792007"
-        r="2.6410723"
-      ></motion.circle>
-      <motion.circle
+        cx='32.8760376'
+        cy='49.0792007'
+        r='2.6410723'
+      ></motion.circle> */}
+      {/* <motion.circle
         variants={child}
         whileTap={{
           fillOpacity: 1,
-          transition: { duration: 0.5 },
+          transition: { duration: 0.5 }
         }}
         whileHover={{
           fillOpacity: 1,
-          transition: { duration: 0.5 },
+          transition: { duration: 0.5 }
         }}
-        cx="26.7814331"
-        cy="58.0182495"
-        r="4.4696827"
-      ></motion.circle>
+        cx='26.7814331'
+        cy='58.0182495'
+        r='4.4696827'
+      ></motion.circle> */}
     </motion.g>
-  ),
-});
+  )
+})

@@ -14,6 +14,7 @@ import { Body, TopHeading } from '@/components/typography'
 import { CircleArray } from '@/assets/motion/CircleArray'
 import useColorSwitcher from '@/utils/hooks/useColorSwitcher'
 import { FaPlayCircle } from 'react-icons/fa'
+import { Image } from '@chakra-ui/image'
 
 const Hero = ({ ...props }) => {
   const { secondary, primary } = useColorSwitcher()
@@ -25,7 +26,28 @@ const Hero = ({ ...props }) => {
   const light = colorMode === 'light'
 
   return (
-    <Box {...props}>
+    <Box
+      {...props}
+      pos='relative'
+      // w='100%'
+      h='400px'
+      _before={{
+        content: '""',
+        bgImage: `${
+          colorMode === 'light' ? 'url(/bglight2.png)' : 'url(/bglight2.png)'
+        }`,
+        bgSize: 'cover',
+        pos: 'absolute',
+        // opacity: '0.5',
+        top: 0,
+        right: 0,
+        left: 0,
+        bottom: 0,
+        opacity: 0.9,
+        borderRadius: '3em',
+        zIndex: -999
+      }}
+    >
       <section className='grid'>
         <Box as='section'>
           <TopHeading
@@ -36,7 +58,7 @@ const Hero = ({ ...props }) => {
           >
             Team Samsad
           </TopHeading>
-          <Text fontSize='md' marginBottom='1.5em'>
+          <Text fontSize='1.3em' marginBottom='1.5em' fontWeight='extrabold'>
             Our research mainly focuses on studying the representation of
             minorities and underrepresented in the legislative parliament of
             Nepal. It tries to understand the structure of federal parliament
@@ -95,6 +117,7 @@ const Hero = ({ ...props }) => {
         </Box>
 
         <Center>
+          {/* <Image src='/bglight.png' borderRadius='5em' /> */}
           <CircleArray
             strokeWidth='0.5px'
             fill={secondary}
