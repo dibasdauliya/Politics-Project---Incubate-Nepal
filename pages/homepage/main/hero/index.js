@@ -33,9 +33,7 @@ const Hero = ({ ...props }) => {
       h='400px'
       _before={{
         content: '""',
-        bgImage: `${
-          colorMode === 'light' ? 'url(/bglight2.png)' : 'url(/bglight2.png)'
-        }`,
+        bgImage: 'url(/bglight2.png)',
         bgSize: 'cover',
         pos: 'absolute',
         // opacity: '0.5',

@@ -182,22 +182,22 @@ function Quiz({ ...props }) {
       //   clearTimeout(timeout)
       //   timeout = null
       // } else {
-      // timeout = setTimeout(() => {
-      //   rightClick()
-      // }, 3000)
-      // }
+      timeout = setTimeout(() => {
+        rightClick()
+      }, 3000)
+      //   }
     }
   }
 
   function leftClick(e) {
-    // clearTimeout(timeout)
+    clearTimeout(timeout)
     if (position !== 0 && position < quiz.length) setPos((pos) => pos - 1)
     setClicked(false)
     e.preventDefault()
   }
 
   function rightClick(event) {
-    // clearTimeout(timeout)
+    clearTimeout(timeout)
     position < quiz.length && setPos((pos) => pos + 1)
     setClicked(false)
     event && event.preventDefault()
