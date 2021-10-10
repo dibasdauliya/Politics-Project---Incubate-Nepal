@@ -54,6 +54,19 @@
   }
 }
 
+@media (max-width: 970px) {
+  .grid .bubbles {
+    display: none;
+  }
+  .bgImage::before {
+    content: '';
+    position: absolute;
+    background: url(/bglight2.png);
+    background-size: cover;
+    background-position-x: 50%;
+  }
+}
+
 .aboutImage {
   object-fit: cover;
   border-radius: 100%;

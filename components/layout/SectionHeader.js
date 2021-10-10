@@ -28,11 +28,10 @@ const SectionHeader = ({
         strokeWidth='0.5px'
         fill={secondary}
         stroke={secondary}
-        className='bubbles'
-        boxSize='15em'
+        className='bubbles2'
+        boxSize={{ base: '8em', md: '10em', xl: '15em' }}
         pos='absolute'
-        right='10em'
-        // top='-1em'
+        right={{ base: '1em', md: '1em', xl: '10em' }}
       />
     </Flex>
   )

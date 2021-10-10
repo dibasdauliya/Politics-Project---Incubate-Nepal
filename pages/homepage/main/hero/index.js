@@ -45,6 +45,7 @@ const Hero = ({ ...props }) => {
         borderRadius: '3em',
         zIndex: -999
       }}
+      className='bgImage'
     >
       <section className='grid'>
         <Box as='section'>
@@ -114,7 +115,7 @@ const Hero = ({ ...props }) => {
           </Body> */}
         </Box>
 
-        <Center>
+        <Center className='bubbles'>
           {/* <Image src='/bglight.png' borderRadius='5em' /> */}
           <CircleArray
             strokeWidth='0.5px'
