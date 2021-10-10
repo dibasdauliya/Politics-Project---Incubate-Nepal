@@ -31,6 +31,12 @@ function MyApp({ Component, pageProps }) {
         />
         <link rel='manifest' href='/site.webmanifest' />
         <link rel='mask-icon' href='/safari-pinned-tab.svg' color='#5bbad5' />
+        <link rel='preconnect' href='https://fonts.googleapis.com' />
+        <link
+          rel='preconnect'
+          href='https://fonts.gstatic.com'
+          crossOrigin='true'
+        />
       </Head>
       <Component {...pageProps} />
     </ChakraProvider>

@@ -440,7 +440,7 @@ export default function Article() {
           constitution?
         </Heading3>
         <Text>
-          When the percentage of women elected from FPTP is kept constant; I.e,.
+          When the percentage of women elected from FPTP is kept constant; I.e.,
           33.33%, the ratio can be changed without breaching the constitution.
         </Text>
       </Box>

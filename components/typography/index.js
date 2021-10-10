@@ -81,7 +81,8 @@ export const Heading3 = ({ big = false, color, children, ...props }) => {
       {...props}
       as='h3'
       color={color}
-      fontFamily={big ? 'Poppins, sans-serif' : 'Roboto Mono, monospace'}
+      // fontFamily={big ? 'Poppins, sans-serif' : 'Roboto Mono, monospace'}
+      fontFamily={'Noto Serif'}
       fontSize={fontSize}
       fontWeight='bold'
       lineHeight='1.25em'

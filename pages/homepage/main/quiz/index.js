@@ -25,6 +25,7 @@ import {
   FaTimesCircle
 } from 'react-icons/fa'
 import CBullet from '@/components/typography/bullet'
+import { MdNoEncryption } from 'react-icons/md'
 
 function Quiz({ ...props }) {
   const [position, setPos] = useState(0)
@@ -181,25 +182,25 @@ function Quiz({ ...props }) {
       //   clearTimeout(timeout)
       //   timeout = null
       // } else {
-      timeout = setTimeout(() => {
-        rightClick()
-      }, 3000)
+      // timeout = setTimeout(() => {
+      //   rightClick()
+      // }, 3000)
       // }
     }
   }
 
   function leftClick(e) {
-    clearTimeout(timeout)
+    // clearTimeout(timeout)
     if (position !== 0 && position < quiz.length) setPos((pos) => pos - 1)
     setClicked(false)
     e.preventDefault()
   }
 
-  function rightClick() {
-    clearTimeout(timeout)
+  function rightClick(event) {
+    // clearTimeout(timeout)
     position < quiz.length && setPos((pos) => pos + 1)
     setClicked(false)
-    // e.preventDefault()
+    event && event.preventDefault()
   }
 
   function startAgain() {
@@ -266,7 +267,7 @@ function Quiz({ ...props }) {
               <FaChevronCircleLeft />
             </Link>
           </Box>
-          <Center width='60%'>
+          <Center width='60%' mx='0.5em'>
             {position < quiz.length ? (
               <>
                 <Stack>

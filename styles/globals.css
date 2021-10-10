@@ -39,6 +39,10 @@
   display: none;
 }
 
+.gridd {
+  margin-top: 1.5em;
+}
+
 @media only screen and (min-width: 1080px) {
   .gridd {
     display: grid;

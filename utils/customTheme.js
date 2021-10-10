@@ -62,8 +62,10 @@ const theme = extendTheme({
     }
   },
   fonts: {
-    heading: 'Poppins',
-    body: 'Roboto Mono'
+    // heading: 'Poppins',
+    heading: 'Noto Serif',
+    body: 'Noto Serif'
+    // body: 'Roboto Mono'
   },
   breakpoints
 })
