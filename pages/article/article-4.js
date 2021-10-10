@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import {
   Box,
   Stack,
@@ -209,38 +210,46 @@ export default function Article() {
             reservation.
           </Text>
         </Box>
-        <small>
-          Source:{' '}
-          <UnorderedList listStyleType='none' spacing={1}>
+        <Text fontSize='smaller' mt='1.5em'>
+          Reference:{' '}
+          <UnorderedList spacing={1}>
             <li>
-              <Link
+              {/* <Link
                 href='https://election.gov.np/source/%E0%A4%A8%E0%A4%BF%E0%A4%B0%E0%A5%8D%E0%A4%B5%E0%A4%BE%E0%A4%9A%E0%A4%A8%20%E0%A4%95%E0%A4%BE%E0%A4%A8%E0%A5%82%E0%A4%A8/%E0%A5%A7-%E0%A4%90%E0%A4%A8/%E0%A5%AD-%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%A4%E0%A4%BF%E0%A4%A8%E0%A4%BF%E0%A4%A7%E0%A4%BF%20%E0%A4%B8%E0%A4%AD%E0%A4%BE%20%E0%A4%B8%E0%A4%A6%E0%A4%B8%E0%A5%8D%E0%A4%AF%20%E0%A4%A8%E0%A4%BF%E0%A4%B0%E0%A5%8D%E0%A4%B5%E0%A4%BE%E0%A4%9A%E0%A4%A8%20%E0%A4%90%E0%A4%A8%2C%20%E0%A5%A8%E0%A5%A6%E0%A5%AD%E0%A5%AA.pdf'
                 target='_blank'
                 rel='referrer noopener'
               >
                 ७-प्रतिनिधि सभा सदस्य निर्वाचन ऐन, २०७४.pdf (Page 15, 32)
-              </Link>
+              </Link> */}
+              प्रतिनिधि सभा, Page 15, 32,
+              https://election.gov.np/source/%E0%A4%A8%E0%A4%BF%E0%A4%B0%E0%A5%8D%E0%A4%B5%E0%A4%BE%E0%A4%9A%E0%A4%A8%20%E0%A4%95%E0%A4%BE%E0%A4%A8%E0%A5%82%E0%A4%A8/%E0%A5%A7-%E0%A4%90%E0%A4%A8/%E0%A5%AD-%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%A4%E0%A4%BF%E0%A4%A8%E0%A4%BF%E0%A4%A7%E0%A4%BF%20%E0%A4%B8%E0%A4%AD%E0%A4%BE%20%E0%A4%B8%E0%A4%A6%E0%A4%B8%E0%A5%8D%E0%A4%AF%20%E0%A4%A8%E0%A4%BF%E0%A4%B0%E0%A5%8D%E0%A4%B5%E0%A4%BE%E0%A4%9A%E0%A4%A8%20%E0%A4%90%E0%A4%A8%2C%20%E0%A5%A8%E0%A5%A6%E0%A5%AD%E0%A5%AA.pdf
             </li>
             <li>
-              <Link
+              {/* <Link
                 href='https://www.lawcommission.gov.np/en/archives/category/documents/prevailing-law/constitution/constitution-of-nepal'
                 target='_blank'
                 rel='referrer noopener'
               >
                 https://www.lawcommission.gov.np/en/archives/category/documents/prevailing-law/constitution/constitution-of-nepal
-              </Link>
+              </Link> */}
+              Paswan, Bhola. "Dalits and women the most under-represented in
+              Parliament" <em>the Record</em>, March 3, 2018,
+              recordnepal.com/dalits-and-women-the-most-under-represented-in-parliament
             </li>
             <li>
-              <Link
+              {/* <Link
                 href='https://www.recordnepal.com/dalits-and-women-the-most-under-represented-in-parliament'
                 target='_blank'
                 rel='referrer noopener'
               >
                 https://www.recordnepal.com/dalits-and-women-the-most-under-represented-in-parliament
-              </Link>
+              </Link> */}
+              "Federal Legislature" <em>Nepal Law Commission</em>, Part-8
+              Federal Legislature, September 9, 2018,
+              lawcommission.gov.np/en/archives/category/documents/prevailing-law/constitution/constitution-of-nepal
             </li>
           </UnorderedList>
-        </small>
+        </Text>
       </Stack>
     </ArticleLayout>
   )

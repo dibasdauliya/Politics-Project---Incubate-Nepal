@@ -156,18 +156,18 @@ export default function Article() {
           success story of the probate Bahuns, the brahmins from the hills. Even
           After Jang Bahadur Kunwar came to power in September 1846, following
           the Kot Massacre, he reorganized the judicial, civil, and revenue
-          administration along seemingly institutional models. His Muluki Ain,
-          or Civil Code of 1854, tried to codify Hindu caste orthodoxy as a
-          state ideology with the Bahuns and Thakuris- Chhetris topping the
-          social hierarchy and lumping a large segment of other Nepalis,
-          including the Newars, as enslavable matawalis. Although Jung
-          Bahadur's Muluki Ain, which gave the highest ritual status to Bahuns,
-          was officially abolished 110 years later in 1964, it had by then
-          ensured the Bahun's secular status as well by putting them at the top
-          of the social pyramid. With the exception of a few "token" members
-          from other caste groups, Nepal's politics, Nepal's education system,
-          Nepal's public sector, Nepali media has been entirely dominated by
-          Bahunists and their circle of semi-slaves.
+          administration along seemingly institutional models. His 
+          <em>Muluki Ain</em>, or Civil Code of 1854, tried to codify Hindu
+          caste orthodoxy as a state ideology with the Bahuns and Thakuris-
+          Chhetris topping the social hierarchy and lumping a large segment of
+          other Nepalis, including the Newars, as enslavable matawalis. Although
+          Jung Bahadur's&nbsp;<em>Muluki Ain</em>, which gave the highest ritual
+          status to Bahuns, was officially abolished 110 years later in 1964, it
+          had by then ensured the Bahun's secular status as well by putting them
+          at the top of the social pyramid. With the exception of a few "token"
+          members from other caste groups, Nepal's politics, Nepal's education
+          system, Nepal's public sector, Nepali media has been entirely
+          dominated by Bahunists and their circle of semi-slaves.
         </Text>
         <Text>
           Even today, despite having a population of 31.2 percent, this group
@@ -179,16 +179,17 @@ export default function Article() {
           belonging to these ethnic groups has reached the country's top
           executive post. 
         </Text>
-        <small>
-          Source:{' '}
-          <Link
+        <Text fontSize='smaller' mt='1em'>
+          Source: Malla, kamal P. "Bahunvada: Myth or reality?",
+          <em> Himal South Asian</em>, Nov 19, 2018,{' '}
+          {/* <Link
             target='_blank'
             rel='referrer noopener'
             href='https://www.himalmag.com/bahunvada-myth-or-reality-kamal-p-malla-1992/'
-          >
-            https://www.himalmag.com/bahunvada-myth-or-reality-kamal-p-malla-1992/
-          </Link>
-        </small>
+          > */}
+          himalmag.com/bahunvada-myth-or-reality-kamal-p-malla-1992/
+          {/* </Link> */}
+        </Text>
       </Box>
       <Heading3>What are the provisions for women and minorities?</Heading3>
       <Box mb='2em'>
@@ -265,38 +266,47 @@ export default function Article() {
           their lists. Between HoR and SA candidates, 147 persons with
           disabilities have been nominated on the PR list.
         </Text>
-        <small>
+        <Text fontSize='smaller' mt='1.5em'>
           Source:{' '}
-          <UnorderedList listStyleType='none' spacing={1}>
+          <UnorderedList spacing={1}>
             <li>
-              <Link
+              {/* <Link
                 href='https://www.recordnepal.com/dalits-and-women-the-most-under-represented-in-parliament'
                 target='_blank'
                 rel='referrer noopener'
               >
                 https://www.recordnepal.com/dalits-and-women-the-most-under-represented-in-parliament
-              </Link>
+              </Link> */}
+              Paswan, Bhola. "Dalits and women the most under-represented in
+              Parliament" <em>the Record</em>, March 3, 2018,
+              recordnepal.com/dalits-and-women-the-most-under-represented-in-parliament
             </li>
             <li>
-              <Link
+              {/* <Link
                 href='https://www.misaal.ngo/wp-content/uploads/2018/11/Nepal.pdf'
                 target='_blank'
                 rel='referrer noopener'
               >
                 https://www.misaal.ngo/wp-content/uploads/2018/11/Nepal.pdf
-              </Link>
+              </Link> */}
+              "The State of Minorities in Nepal"
+              misaal.ngo/wp-content/uploads/2018/11/Nepal.pdf
             </li>
             <li>
-              <Link
+              {/* <Link
                 href='https://www.ifes.org/sites/default/files/2017_ifes_nepal_house_of_representatives_and_state_assembly_elections_faqs_final_1.pdf'
                 target='_blank'
                 rel='referrer noopener'
               >
                 https://www.ifes.org/sites/default/files/2017_ifes_nepal_house_of_representatives_and_state_assembly_elections_faqs_final_1.pdf{' '}
-              </Link>
+              </Link> */}
+              "Elections in Nepal"{' '}
+              <em>International Foundation for Electoral Systems</em>, November
+              21, 2017,
+              ifes.org/sites/default/files/2017_ifes_nepal_house_of_representatives_and_state_assembly_elections_faqs_final_1.pdf
             </li>
           </UnorderedList>
-        </small>
+        </Text>
       </Box>
     </ArticleLayout>
   )

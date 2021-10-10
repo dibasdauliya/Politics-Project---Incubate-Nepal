@@ -27,26 +27,34 @@ export default function Article() {
           FPTP candidate for their SA, one for the HoR party list, and one for
           the SA party list.
         </Text>
-        <small>
-          Source:{' '}
-          <Link
+        <Text fontSize='smaller' mt='1em'>
+          Source: "Elections in Nepal"{' '}
+          <em>International Foundation for Electoral Systems</em>, November 21,
+          2017,
+          ifes.org/sites/default/files/2017_ifes_nepal_house_of_representatives_and_state_assembly_elections_faqs_final_1.pdf
+          {/* <Link
             target='_blank'
             rel='referrer noopener'
             href='https://www.ifes.org/sites/default/files/2017_ifes_nepal_house_of_representatives_and_state_assembly_elections_faqs_final_1.pdf'
           >
             https://www.ifes.org/sites/default/files/2017_ifes_nepal_house_of_representatives_and_state_assembly_elections_faqs_final_1.pdf
-          </Link>
-        </small>
+          </Link> */}
+        </Text>
       </Box>
       <Box mb='1em'>
         <Heading3>Constituencies of Nepal according to districts:</Heading3>
-        <Link
+        {/* <Link
           target='_blank'
           rel='referrer noopener'
           href='http://www.election.gov.np/election/en/district-wise-constituency-map.html '
         >
           http://www.election.gov.np/election/en/district-wise-constituency-map.html
-        </Link>
+        </Link> */}
+        <Text fontSize='smaller'>
+          "District Wise Constituency Map",{' '}
+          <em>Election Commission of Nepal</em>,
+          election.gov.np/election/en/district-wise-constituency-map.html
+        </Text>
       </Box>
       <Box mb='2em'>
         <Heading3>Advantages of Electoral Constituencies</Heading3>
@@ -67,16 +75,19 @@ export default function Article() {
             accountable and re-elected or rejected in the next election.
           </ListItem>
         </List>
-        <small>
+        <Text fontSize='smaller' mt='1em'>
           Source:{' '}
-          <Link
+          {/* <Link
             target='_blank'
             rel='referrer noopener'
             href='https://aceproject.org/main/english/bd/bda02a01.htm'
           >
             https://aceproject.org/main/english/bd/bda02a01.htm
-          </Link>
-        </small>
+          </Link> */}
+          "Single-Member Districts: Advantages and Disadvantages",{' '}
+          <em>Ace The Electoral knowledge Network</em>,
+          aceproject.org/main/english/bd/bda02a01.htm
+        </Text>
       </Box>
       <Box mb='2em'>
         <Heading3>Disadvantages of Electoral Constituencies</Heading3>

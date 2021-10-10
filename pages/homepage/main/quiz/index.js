@@ -244,6 +244,10 @@ function Quiz({ ...props }) {
       </Box>
 
       <Box>
+        <Body mb='1.7em'>
+          Hi! Let our smart quiz recommend you some articles based on your
+          performance.
+        </Body>
         <Flex justifyContent='center' alignItems='center'>
           <Box fontSize='2xl'>
             <Link

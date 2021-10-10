@@ -252,15 +252,18 @@ export default function Article() {
             constituencies delimited in the country on the basis of geography
             and population.
           </Text>
-          <Text as='cite'>
+          <Text fontSize='smaller' mt='1em'>
             Source:{' '}
-            <Link
+            {/* <Link
               target='_blank'
               rel='referrer noopener'
               href='https://www.lawcommission.gov.np/en/archives/category/documents/prevailing-law/constitution/constitution-of-nepal'
             >
               https://www.lawcommission.gov.np/en/archives/category/documents/prevailing-law/constitution/constitution-of-nepal
-            </Link>
+            </Link> */}
+            "Federal Legislature" <em>Nepal Law Commission</em>, Part-8 Federal
+            Legislature, September 9, 2018,
+            lawcommission.gov.np/en/archives/category/documents/prevailing-law/constitution/constitution-of-nepal
           </Text>
         </Box>
         <Text>
@@ -311,7 +314,7 @@ export default function Article() {
               Secretary
             </ListItem>
           </List>
-          <Text as='cite'>
+          {/* <Text as='cite'>
             Source:{' '}
             <Link
               target='_blank'
@@ -320,18 +323,20 @@ export default function Article() {
             >
               https://www.lawcommission.gov.np/en/archives/category/documents/prevailing-law/constitution/constitution-of-nepal
             </Link>
-          </Text>
+          </Text> */}
         </Stack>
         <Box>
           <Text as='blockquote'>
             And on the Sub Article 6 of the same article, the constitution
-            states that: While delimitating election constituencies pursuant to
-            clause (5), regard must be had to, inter alia, the density of
-            population, geographical specificity, administrative and
-            transportation convenience, community and cultural aspects of the
-            constituencies.
+            states that:{' '}
+            <em>
+              While delimitating election constituencies pursuant to clause (5),
+              regard must be had to, inter alia, the density of population,
+              geographical specificity, administrative and transportation
+              convenience, community and cultural aspects of the constituencies.
+            </em>
           </Text>
-          <Text as='cite'>
+          {/* <Text as='cite'>
             Source:{' '}
             <Link
               target='_blank'
@@ -340,7 +345,7 @@ export default function Article() {
             >
               https://www.lawcommission.gov.np/en/archives/category/documents/prevailing-law/constitution/constitution-of-nepal
             </Link>
-          </Text>
+          </Text> */}
         </Box>
         <Text>
           This clearly shows that area of a particular district is not, in fact,
@@ -368,15 +373,18 @@ export default function Article() {
             like geography, population distribution, social diversity and laws
             regarding electoral constituency”.
           </Text>
-          <Text as='cite'>
+          <Text mt='1em' fontSize='smaller'>
             Source:{' '}
-            <Link
+            {/* <Link
               target='_blank'
               rel='referrer noopener'
               href='https://kathmandupost.com/national/2017/08/31/cdc-submits-its-report-with-165-electoral-constituencies'
             >
               https://kathmandupost.com/national/2017/08/31/cdc-submits-its-report-with-165-electoral-constituencies
-            </Link>
+            </Link> */}
+            Giri, Sanjiv. "CDC submits its report with 165 electoral
+            constituencies", <em>The Kathmandu Post</em>,
+            kathmandupost.com/national/2017/08/31/cdc-submits-its-report-with-165-electoral-constituencies
           </Text>
         </Box>
         <Text>
@@ -564,6 +572,10 @@ export default function Article() {
             </Tbody>
           </Table>
         </Box>
+        <Text fontSize='smaller' mt='1.5em'>
+          Reference: UNFPA NEPAL 2017, "Nepal Population Situation Analysis",
+          nepal.unfpa.org/sites/default/files/pub-pdf/Nepal%20Population%20Situation%20Analysis.pdf
+        </Text>
       </Stack>
     </ArticleLayout>
   )

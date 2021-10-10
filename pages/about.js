@@ -12,9 +12,24 @@ import { ArticleCardAside } from '@/components/articlecard2'
 import useColorSwitcher from '@/utils/hooks/useColorSwitcher'
 import { ImageProfile } from '@/assets/images'
 import { useColorModeValue } from '@chakra-ui/color-mode'
-import { FaFacebook, FaLinkedin, FaTwitter } from 'react-icons/fa'
+import {
+  FaFacebook,
+  FaInstagram,
+  FaLinkedin,
+  FaTwitter,
+  FaYoutube
+} from 'react-icons/fa'
 
-const AboutImage = ({ src, alt, role, twitter, linkedin }) => {
+const AboutImage = ({
+  src,
+  alt,
+  role,
+  twitter,
+  linkedin,
+  insta,
+  facebook,
+  youtube
+}) => {
   const greyBg = useColorModeValue('neutral.300', 'neutral.500')
   const lightGreyBg = useColorModeValue('neutral.100', 'neutral.700')
   return (
@@ -34,15 +49,48 @@ const AboutImage = ({ src, alt, role, twitter, linkedin }) => {
       <Center fontWeight='bold'>{alt}</Center>
       <Center fontWeight='normal'>{role}</Center>
       <Center mt='0.5em' display='flex' gridGap='0.5em'>
+        {twitter !== undefined && (
+          <Link
+            href={`https://www.twitter.com/${twitter}`}
+            target='_blank'
+            rel='referrer noopener'
+          >
+            <FaTwitter />
+          </Link>
+        )}
+
+        {insta !== undefined && (
+          <Link
+            href={`https://www.instagram.com/${insta}`}
+            target='_blank'
+            rel='referrer noopener'
+          >
+            <FaInstagram />
+          </Link>
+        )}
+
+        {youtube !== undefined && (
+          <Link
+            href={`https://www.youtube.com/channel/${youtube}`}
+            target='_blank'
+            rel='referrer noopener'
+          >
+            <FaYoutube />
+          </Link>
+        )}
+
+        {facebook && (
+          <Link
+            href={`https://www.facebook.com/${facebook}`}
+            target='_blank'
+            rel='referrer noopener'
+          >
+            <FaFacebook />
+          </Link>
+        )}
+
         <Link
-          href={`https://www.twitter.com/${twitter}`}
-          target='_blank'
-          rel='referrer noopener'
-        >
-          <FaTwitter />
-        </Link>
-        <Link
-          href={`https://www.linkedin.com/${linkedin}`}
+          href={`https://www.linkedin.com/in/${linkedin}`}
           target='_blank'
           rel='referrer noopener'
         >
@@ -53,7 +101,18 @@ const AboutImage = ({ src, alt, role, twitter, linkedin }) => {
   )
 }
 
-const TeamCard = ({ fd, children, src, alt, role, twitter, linkedin }) => {
+const TeamCard = ({
+  fd,
+  children,
+  src,
+  alt,
+  role,
+  twitter,
+  linkedin,
+  insta,
+  facebook,
+  youtube
+}) => {
   return (
     <Flex
       gridGap='1em'
@@ -68,6 +127,9 @@ const TeamCard = ({ fd, children, src, alt, role, twitter, linkedin }) => {
         role={role}
         twitter={twitter}
         linkedin={linkedin}
+        insta={insta}
+        facebook={facebook}
+        youtube={youtube}
       />
       <Text alignSelf='center' width='60ch'>
         {children}
@@ -134,12 +196,14 @@ export default function About() {
             <TeamCard
               src='aayusha.jpg'
               alt='Aayusha Dhungana'
-              role='role'
-              twitter='twitter'
-              linkedin='linkedin'
+              role='Researcher'
+              facebook='shyana.ad'
+              linkedin='aayusha-dhungana-ab773a206'
+              // insta={undefined}
+              // youtube={undefined}
             >
               Politics and social affairs were never something I preferred
-              reading or discuss before. But, unexpectedly, this experience
+              reading or discussing before. But, unexpectedly, this experience
               pushed me to dig into a wide range of the country's political
               situation that changed my overall perspective in this area. Also,
               getting to work with highly motivating and supportive teammates
@@ -149,9 +213,12 @@ export default function About() {
             <TeamCard
               src='bikash.jpg'
               alt='Bikash Agrawal'
-              role='role'
-              twitter='twitter'
-              linkedin='linkedin'
+              role='Researcher'
+              twitter='Bikash219'
+              linkedin='bikash-agrawal-436783219'
+              // insta={undefined}
+              // youtube={undefined}
+              // facebook={undefined}
               fd='row-reverse'
             >
               As a student from science background, it was sort of a fun task to
@@ -165,9 +232,12 @@ export default function About() {
             <TeamCard
               src='dibas.jpg'
               alt='Dibas Dauliya'
-              role='role'
-              twitter='twitter'
-              linkedin='linkedin'
+              role='Researcher'
+              twitter='dibasdauliya33'
+              linkedin='dibasdauliya'
+              // insta={undefined}
+              // youtube={undefined}
+              // facebook={undefined}
             >
               This fantastic project helped me to be more social, improving my
               presentation and networking skills. I also elevated my
@@ -180,9 +250,12 @@ export default function About() {
             <TeamCard
               src='manoj.jpg'
               alt='Manoj Dhakal'
-              role='role'
-              twitter='twitter'
-              linkedin='linkedin'
+              role='Researcher'
+              youtube='UC9CnPyQQvPhZjY06GWREwPA'
+              linkedin='manoj-dhakal-4950a71b7'
+              // insta={undefined}
+              // facebook={undefined}
+              // twitter={undefined}
               fd='row-reverse'
             >
               This project made me realize how we have a general tendency to
@@ -193,9 +266,12 @@ export default function About() {
             <TeamCard
               src='rojeena.jpg'
               alt='Rojeena Thapa'
-              role='role'
-              twitter='twitter'
-              linkedin='linkedin'
+              role='Researcher'
+              insta='rojeenaa_'
+              linkedin='rojeena-thapa-3b144a214'
+              // facebook={undefined}
+              // twitter={undefined}
+              // youtube={undefined}
             >
               Incubate Nepal was an exhilarating process for me. What I thought
               to be a rigorous project was all about fun discussions, common
@@ -207,9 +283,12 @@ export default function About() {
             <TeamCard
               src='lajju.jpg'
               alt='Lajju Shrestha'
-              role='role'
-              twitter='twitter'
-              linkedin='linkedin'
+              role='Researcher'
+              insta='lazzu_sth'
+              linkedin='lajju-shrestha-she-her-b561301b0'
+              // facebook={undefined}
+              // twitter={undefined}
+              // youtube={undefined}
               fd='row-reverse'
             >
               This 8-week long project was an insightful journey where I was not
