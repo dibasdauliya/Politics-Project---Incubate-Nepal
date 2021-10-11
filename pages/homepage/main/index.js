@@ -21,7 +21,7 @@ const Main = ({ aboutRef, skillsRef, projectsRef, contactRef }) => {
       <Articles id='articles' mb='20vh' />
       <SliderPart id='slider' mb='20vh' />
 
-      <Lorem />
+      {/* <Lorem /> */}
 
       {/* <Lorem id='about' mb='20vh' ref={aboutRef} /> */}
 
