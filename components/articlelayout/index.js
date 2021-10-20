@@ -57,7 +57,7 @@ export default function ArticleLayout({
           //   zIndex: -999
           // }}
           as='header'
-          mt='0.74em'
+          mt='1.5em'
           className='post-header'
         >
           <Heading as='h1' mb={7}>

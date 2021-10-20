@@ -47,7 +47,11 @@ const AboutImage = ({
         </Box>
       </Box>
       <Center fontWeight='bold'>{alt}</Center>
-      <Center fontWeight='normal'>{role}</Center>
+      <Center
+        textAlign='center'
+        fontWeight='normal'
+        dangerouslySetInnerHTML={{ __html: role }}
+      />
       <Center mt='0.5em' display='flex' gridGap='0.5em'>
         {twitter !== undefined && (
           <Link
@@ -115,7 +119,7 @@ const TeamCard = ({
 }) => {
   return (
     <Flex
-      gridGap='1em'
+      gridGap='1.3em'
       justifyContent='center'
       flexWrap='wrap'
       mb='2em'
@@ -151,7 +155,7 @@ export default function About() {
       <Header />
 
       <MainLayout>
-        <Box as='main' outline='0' tabIndex={-1} w='100%'>
+        <Box as='main' outline='0' tabIndex={-1} w='100%' mt='1.5em'>
           <Box w='100%' mb={{ base: '32px', md: '64px', xl: '100px' }}>
             <Heading as='h1' mb={7}>
               {title}
@@ -233,6 +237,7 @@ export default function About() {
               src='dibas.jpg'
               alt='Dibas Dauliya'
               role='Researcher'
+              // role='Researcher <br> and Website Developer'
               twitter='dibasdauliya33'
               linkedin='dibasdauliya'
               // insta={undefined}
