@@ -167,9 +167,9 @@
   }
 }
 
-.mySwiper {
+/* .mySwiper {
   cursor: grab;
-}
+} */
 
 .swiper-pagination-bullet {
   cursor: pointer;
@@ -187,4 +187,10 @@
 .swiper-pagination-bullet-active {
   color: #fff;
   background: #81e6d9ab !important;
+}
+
+.swiper-wrapper > div {
+  background: #35d8afdc;
+  padding: 1em;
+  min-height: 29em !important;
 }

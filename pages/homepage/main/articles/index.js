@@ -24,6 +24,7 @@ const Articles = ({ ...props }) => {
   const [articles, setArticles] = useState(data)
   const [show, setShow] = useState(false)
   const [show2, setShow2] = useState(false)
+  const [show3, setShow3] = useState(false)
 
   const { secondary, primary } = useColorSwitcher()
   const { colorMode } = useColorMode()
@@ -53,8 +54,8 @@ const Articles = ({ ...props }) => {
         </Title>
         <Box my='1.5em'>
           <Swiper
-            slidesPerView={2}
-            spaceBetween={35}
+            slidesPerView={3}
+            spaceBetween={30}
             pagination={{
               clickable: true
             }}
@@ -72,7 +73,7 @@ const Articles = ({ ...props }) => {
               },
               // when window width is >= 640px
               640: {
-                slidesPerView: 2,
+                slidesPerView: 3,
                 spaceBetween: 40
               }
             }}
@@ -126,10 +127,21 @@ const Articles = ({ ...props }) => {
               FPTP(~3.63%) in the lower house, the ratio 70:30 seems to be the
               edge ratio that meets the constitutional requirement(Try this in
               our slider). With a little bit of forecast that women elected
-              could be even less than the present percent elected, 60:40 could
-              have been agreed to be the FPTP:PR ratio as having more FPTP than
-              60% could bring a deadlock to how constitutional requirement is to
-              be met.
+              could be even less than the
+              {show3 && (
+                <>
+                  present percent elected, 60:40 could have been agreed to be
+                  the FPTP:PR ratio as having more FPTP than 60% could bring a
+                  deadlock to how constitutional requirement is to be met.
+                </>
+              )}
+              <Button
+                color={secondary}
+                variant='link'
+                onClick={() => setShow3(!show3)}
+              >
+                {show3 ? ' Show less' : ' Show more'}
+              </Button>
             </SwiperSlide>
             <SwiperSlide>
               For the elections after interim constitution also had a mixed
