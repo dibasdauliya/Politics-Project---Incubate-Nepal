@@ -194,3 +194,9 @@
   padding: 1em;
   min-height: 29em !important;
 }
+
+@media (max-width: 930px) {
+  .swiper-wrapper > div {
+    min-height: fit-content !important;
+  }
+}
