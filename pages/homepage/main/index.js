@@ -6,6 +6,7 @@ import Articles from './articles'
 import Lorem from './lorem'
 import SliderPart from './slider'
 import Quiz from './quiz'
+import Highlights from './highlights'
 
 const Main = ({ aboutRef, skillsRef, projectsRef, contactRef }) => {
   return (
@@ -18,6 +19,7 @@ const Main = ({ aboutRef, skillsRef, projectsRef, contactRef }) => {
       <SkipNavContent>
         <Quiz id='quiz' mb='20vh' />
       </SkipNavContent>
+      <Highlights id='highlights' mb='20vh' />
       <Articles id='articles' mb='20vh' />
       <SliderPart id='slider' mb='20vh' />
 

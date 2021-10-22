@@ -49,7 +49,8 @@ const Articles = ({ ...props }) => {
             <Title mx='15px'>Articles</Title>
           </Flex>
         </SectionHeader>
-        <Title fontSize='4xl' mt='1em'>
+      </Box>
+      {/* <Title fontSize='4xl' mt='1em'>
           Highlights
         </Title>
         <Box my='1.5em'>
@@ -195,9 +196,9 @@ const Articles = ({ ...props }) => {
                 {show2 ? ' Show less' : ' Show more'}
               </Button>
             </SwiperSlide>
-          </Swiper>
-        </Box>
-        {/* <List spacing={2} my={5}>
+          </Swiper> */}
+      {/* </Box> */}
+      {/* <List spacing={2} my={5}>
           <ListItem>
             <ListIcon as={CBullet} />
             There is a legal provision of a compensatory system for women in the
@@ -304,7 +305,7 @@ const Articles = ({ ...props }) => {
             </Button>
           </ListItem>
         </List> */}
-        Source:
+      {/* Source:
         <OrderedList>
           <ListItem>
             Budhi Karki, Rohan Edrisinha. "The federalism debate in Nepal"{' '}
@@ -316,7 +317,7 @@ const Articles = ({ ...props }) => {
             rc-services-assets.s3.eu-west-1.amazonaws.com/s3fs-public/BacklashAgainstInclusion.pdf
           </ListItem>
         </OrderedList>
-      </Box>
+      </Box> */}
 
       {articles.map(({ title, description, id, slug }) => {
         return (

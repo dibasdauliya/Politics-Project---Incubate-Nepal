@@ -47,12 +47,14 @@ const NavMenu = ({
     <Box as='nav'>
       <FullNav handleClick={handleClick} {...props}>
         <NavMenuItem>Quiz</NavMenuItem>
+        <NavMenuItem>Highlights</NavMenuItem>
         <NavMenuItem>Articles</NavMenuItem>
         <NavMenuItem>Slider</NavMenuItem>
         <NavMenuItem>About</NavMenuItem>
       </FullNav>
       <SideNav toRef={toRef} isOpen={isOpen} onOpen={onOpen} onClose={onClose}>
         <NavMenuItem>Quiz</NavMenuItem>
+        <NavMenuItem>Highlights</NavMenuItem>
         <NavMenuItem>Articles</NavMenuItem>
         <NavMenuItem>Slider</NavMenuItem>
         <NavMenuItem>About</NavMenuItem>
