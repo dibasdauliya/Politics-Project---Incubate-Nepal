@@ -183,7 +183,7 @@ export default function About() {
             >
               <AboutImage
                 src='bhusan-dai.jpg'
-                alt='Bhusal Suwal'
+                alt='Bhusan Suwal'
                 role='Mentor'
                 twitter='twitter'
                 linkedin='linkedin'
