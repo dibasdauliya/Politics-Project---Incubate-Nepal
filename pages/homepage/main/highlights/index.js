@@ -101,10 +101,10 @@ const Highlights = ({ ...props }) => {
                 list unlike in the earlier case of women. So, there is a likely
                 possibility that even with progressive-touted provision, the
                 federal parliament has just around 5 Muslims(~4.4 percent of 110
-                PR seats), which amounts to just 0.015% of the Federal
-                parliament. So, how can the constitution be touted as
-                progressive when it allows not representing an entire group? The
-                question needs answers.{' '}
+                PR seats), which amounts to just 1.5% of the Federal parliament.
+                So, how can the constitution be touted as progressive when it
+                allows not representing an entire group? The question needs
+                answers.{' '}
               </>
             )}
             <Button color={secondary} variant='link' onClick={showHide}>
