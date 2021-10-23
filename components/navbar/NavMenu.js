@@ -49,6 +49,7 @@ const NavMenu = ({
         <NavMenuItem>Quiz</NavMenuItem>
         <NavMenuItem>Highlights</NavMenuItem>
         <NavMenuItem>Articles</NavMenuItem>
+        <NavMenuItem>Interview</NavMenuItem>
         <NavMenuItem>Slider</NavMenuItem>
         <NavMenuItem>About</NavMenuItem>
       </FullNav>
@@ -56,6 +57,7 @@ const NavMenu = ({
         <NavMenuItem>Quiz</NavMenuItem>
         <NavMenuItem>Highlights</NavMenuItem>
         <NavMenuItem>Articles</NavMenuItem>
+        <NavMenuItem>Interview</NavMenuItem>
         <NavMenuItem>Slider</NavMenuItem>
         <NavMenuItem>About</NavMenuItem>
       </SideNav>

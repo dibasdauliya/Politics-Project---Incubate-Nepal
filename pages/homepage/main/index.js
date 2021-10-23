@@ -7,6 +7,7 @@ import Lorem from './lorem'
 import SliderPart from './slider'
 import Quiz from './quiz'
 import Highlights from './highlights'
+import Interview from './interview'
 
 const Main = ({ aboutRef, skillsRef, projectsRef, contactRef }) => {
   return (
@@ -21,6 +22,7 @@ const Main = ({ aboutRef, skillsRef, projectsRef, contactRef }) => {
       </SkipNavContent>
       <Highlights id='highlights' mb='20vh' />
       <Articles id='articles' mb='20vh' />
+      <Interview id='interview' mb='20vh' />
       <SliderPart id='slider' mb='20vh' />
 
       {/* <Lorem /> */}
