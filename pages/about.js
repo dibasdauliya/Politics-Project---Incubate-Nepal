@@ -236,8 +236,7 @@ export default function About() {
             <TeamCard
               src='dibas.jpg'
               alt='Dibas Dauliya'
-              role='Researcher'
-              // role='Researcher <br> and Website Developer'
+              role='Researcher <br> and Website Developer'
               twitter='dibasdauliya33'
               linkedin='dibasdauliya'
               // insta={undefined}
