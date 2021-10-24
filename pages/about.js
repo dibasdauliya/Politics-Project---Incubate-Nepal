@@ -93,13 +93,15 @@ const AboutImage = ({
           </Link>
         )}
 
-        <Link
-          href={`https://www.linkedin.com/in/${linkedin}`}
-          target='_blank'
-          rel='referrer noopener'
-        >
-          <FaLinkedin />
-        </Link>
+        {linkedin && (
+          <Link
+            href={`https://www.linkedin.com/in/${linkedin}`}
+            target='_blank'
+            rel='referrer noopener'
+          >
+            <FaLinkedin />
+          </Link>
+        )}
       </Center>
     </Flex>
   )
@@ -185,15 +187,15 @@ export default function About() {
                 src='bhusan-dai.jpg'
                 alt='Bhusan Suwal'
                 role='Mentor'
-                twitter='twitter'
-                linkedin='linkedin'
+                // facebook='bhushan.suwal.98'
+                // linkedin='linkedin'
               />
               <AboutImage
                 src='logo-noborder.png'
                 alt='Aayushka Budhathoki'
                 role='Co-mentor'
-                twitter='twitter'
-                linkedin='linkedin'
+                // twitter='twitter'
+                // linkedin='linkedin'
               />
             </Flex>
 
