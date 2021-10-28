@@ -13,6 +13,13 @@ const Navbar = ({ aboutRef, skillsRef, projectsRef, contactRef }) => {
 
   const light = colorMode === 'light'
 
+  React.useEffect(() => {
+    document.documentElement.setAttribute(
+      'data-color-scheme',
+      colorMode === 'light' ? 'light' : 'dark'
+    )
+  }, [colorMode])
+
   const ThemeIcon = () => (
     <Icon w='28px' h='28px' as={colorMode === 'light' ? FaMoon : MdWbSunny} />
   )

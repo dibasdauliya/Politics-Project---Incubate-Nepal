@@ -23,29 +23,10 @@ const SliderPart = ({ ...props }) => {
   const [fptp, setFPTP] = useState(3.63)
   const [ratio, setRatio] = useState(60)
 
-  const [resultData, setResult] = useState([
-    'Im the content in 0th position',
-    'another content'
-  ])
-
-  console.log(resultData)
-
-  let data = {
-    0: ['Im the content in 0th position', 'another content'],
-    1: ["I'm one", "I'm another content"],
-    2: ["I'm two", "I'm another content"],
-    3: ["I'm three", "I'm another content"]
-  }
-
   const women_sent = upperHouse + (fptp / 100) * (ratio / 100) * 275,
     w_req = 111.3222,
     pr_w_req = w_req - women_sent,
     pr_count = ((100 - ratio) / 100) * 275
-
-  function handleSliderChange(val) {
-    // setSliderValue(val)
-    setResult(data[val])
-  }
 
   return (
     <Box
