@@ -12,9 +12,15 @@ function MyApp({ Component, pageProps }) {
         <meta name='theme-color' content='#603cba' />
         <meta content='width=device-width, initial-scale=1.0' name='viewport' />
         <title>Team Samsad</title>
-        <meta name='image' content='/logo.png' />
-        <meta property='og:image' content='/logo.png' />
-        <meta name='twitter:image' content='/logo.png' />
+        <meta name='image' content='https://samsad.vercel.app/logo.png' />
+        <meta
+          property='og:image'
+          content='https://samsad.vercel.app/logo.png'
+        />
+        <meta
+          name='twitter:image'
+          content='https://samsad.vercel.app/logo.png'
+        />
         <link
           rel='apple-touch-icon'
           sizes='180x180'
