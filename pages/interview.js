@@ -1,8 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
 import { Box, Heading, Text } from '@chakra-ui/react'
 import { Heading3 } from '@/components/typography'
-import CBullet from '@/components/typography/bullet'
-import ArticleLayout from '@/components/articlelayout'
 import Head from 'next/head'
 import { Fonts } from '@/utils/Fonts'
 import Header from '@/components/header'

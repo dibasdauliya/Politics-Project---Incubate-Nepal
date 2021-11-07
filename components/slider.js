@@ -110,33 +110,33 @@ const SliderPart = ({ ...props }) => {
         {/* for {`${ratio}:${100 - ratio}`} */}
         <Stack as='ul'>
           {/* {resultData ? (
-            resultData.map((data, idx) => {
-              return (
-                <Bullet key={idx} as='li'>
-                  {data}
+              resultData.map((data, idx) => {
+                return (
+                  <Bullet key={idx} as='li'>
+                    {data}
+                  </Bullet>
+                )
+              })
+            ) : (
+              <>
+                <Bullet as='li'>Lorem ipsum dolor sit amet.</Bullet>
+                <Bullet as='li'>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 </Bullet>
-              )
-            })
-          ) : (
-            <>
-              <Bullet as='li'>Lorem ipsum dolor sit amet.</Bullet>
-              <Bullet as='li'>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              </Bullet>
-              <Bullet as='li'>Lorem, ipsum.</Bullet>
-              <Bullet as='li'>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                Praesentium, ut!
-              </Bullet>
-              <Bullet as='li'>
-                You can read{' '}
-                <Link color={secondary} textDecor='underline' href=''>
-                  this article
-                </Link>{' '}
-                for more information.
-              </Bullet>
-            </>
-          )} */}
+                <Bullet as='li'>Lorem, ipsum.</Bullet>
+                <Bullet as='li'>
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                  Praesentium, ut!
+                </Bullet>
+                <Bullet as='li'>
+                  You can read{' '}
+                  <Link color={secondary} textDecor='underline' href=''>
+                    this article
+                  </Link>{' '}
+                  for more information.
+                </Bullet>
+              </>
+            )} */}
           {pr_w_req < pr_count ? (
             <Bullet
               as='li'
